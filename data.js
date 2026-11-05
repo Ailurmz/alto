@@ -40,7 +40,7 @@ window.ALTO = {
      ejemplo: true = muestra la etiqueta "ejemplo". Poné false
      (o borralo) cuando cargues un proyecto real.                         */
   proyectos: [
-    { piso: "05", cliente: "Rommer",          rubro: "Cuidado capilar", tipo: "Tienda online", anio: 2026, dias: "", link: "https://ailurmz.github.io/rommer-web-v5/", imagen: "assets/img/rommer-1200.webp", color: "#CC3888" },
+    { piso: "05", cliente: "Rommer",          rubro: "Cuidado capilar", tipo: "Tienda online", anio: 2026, dias: "", link: "https://ailurmz.github.io/rommer-web-v5/", imagen: "rommer-1200.webp", color: "#CC3888" },
     { piso: "04", cliente: "RM Construcciones", rubro: "Construcción",  tipo: "Web",           anio: 2026, dias: "", link: "", imagen: "", color: "#121216" },  // ← pasame el link y el año
     { piso: "03", cliente: "Norte Fit",       rubro: "Gimnasio",        tipo: "Web",           anio: 2026, dias: 12, link: "", imagen: "", color: "#2B3BFF", ejemplo: true },
     { piso: "02", cliente: "Estudio Paz",     rubro: "Psicología",      tipo: "Landing",       anio: 2025, dias: 7,  link: "", imagen: "", color: "#FFC53D", ejemplo: true }
