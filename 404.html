@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Este piso no existe · ALTO</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Página 404: siempre de noche */
+  .e404{min-height:100svh;display:grid;place-items:center;text-align:center;padding:40px var(--gut-r) 40px var(--gut-l);background:radial-gradient(circle at 50% 30%,rgba(255,197,61,.22),transparent 55%),var(--noche);color:var(--hueso)}
+  .e404__in{display:grid;gap:22px;justify-items:center}
+  .e404__n{font-family:var(--display);font-size:clamp(140px,30vw,360px);line-height:.8;color:var(--dorado);display:inline-block;transform:scaleY(1.3);transform-origin:bottom;padding-top:.3em}
+  .e404 h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(34px,6vw,72px);line-height:.95}
+  .e404 p{color:#B9B7CC;max-width:40ch}
+</style>
+</head>
+<body data-sky="noche" style="background:#0B0D2A">
+  <main class="e404">
+    <div class="e404__in">
+      <span class="mono" style="color:#FF5A1F">Piso ?? · ascensor detenido</span>
+      <span class="e404__n" aria-hidden="true">404</span>
+      <h1>Este piso no existe.</h1>
+      <p>El link que seguiste no lleva a ninguna parte. Volvé a planta baja y seguimos subiendo.</p>
+      <a class="btn btn--ember" href="./" data-hover="Bajando…"><span>Volvé a planta baja</span></a>
+    </div>
+  </main>
+</body>
+</html>

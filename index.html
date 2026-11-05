@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ALTO · Altas webs para marcas que van alto</title>
+<meta name="description" content="ALTO es un estudio de diseño web UX/UI. Landings y webs con impacto visual para emprendedores y pymes de Argentina y LATAM. Plantillas desde 80 USD y landings a medida desde 290 USD.">
+<meta name="theme-color" content="#2B3BFF">
+<link rel="canonical" href="https://altoagencia.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph: así se ve el link cuando lo compartís por WhatsApp o redes -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="ALTO · Alto nivel para marcas que van alto">
+<meta property="og:description" content="Webs y landings que se ven pro y venden. Hacemos que lo simple se vea pro.">
+<meta property="og:url" content="https://altoagencia.com/">
+<meta property="og:image" content="https://altoagencia.com/assets/img/og-alto.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Tipografías: Anton (títulos), Archivo (texto, con ancho variable), DM Mono (medidas) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wdth,wght@62..125,400..800&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Datos estructurados: le cuentan a Google qué es ALTO -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"ALTO","slogan":"Alto nivel para marcas que van alto.","description":"Estudio de diseño web UX/UI. Landings y webs con impacto visual para emprendedores y pymes.","url":"https://altoagencia.com/","image":"https://altoagencia.com/assets/img/og-alto.jpg","email":"altowebs.agencia@gmail.com","areaServed":["AR","LATAM"],"address":{"@type":"PostalAddress","addressLocality":"Ciudad Autónoma de Buenos Aires","addressCountry":"AR"},"priceRange":"80 USD - 750 USD","sameAs":["https://www.instagram.com/altowebs.agencia/"]}
+</script>
+
+<!-- ===== PÍXEL DE META: pegá acá tu código cuando lo tengas =====
+<script>!function(f,b,e,v,n,t,s){...}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init','TU_ID_DE_PIXEL'); fbq('track','PageView');</script>
+================================================================ -->
+<!-- ===== GOOGLE ANALYTICS: pegá acá tu código cuando lo tengas =====
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+=================================================================== -->
+</head>
+<body data-sky="dia">
+<script>
+  /* Activa el modo animado. Si el usuario pidió menos movimiento, no hay pantalla de carga.
+     Seguro: si algo falla, la pantalla de carga se va sola a los 3,5 s. */
+  (function(d){d.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches){d.classList.add('is-loading');setTimeout(function(){d.classList.remove('is-loading')},3500);}})(document.documentElement);
+</script>
+
+<a class="skip" href="#torre">Saltar al contenido</a>
+
+<!-- Fondo: cielo generativo (WebGL). Si el equipo no puede, queda el degradé de respaldo -->
+<div class="sky-fallback" aria-hidden="true"></div>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<!-- Carga inicial: puertas de ascensor -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="door door--l"></div><div class="door door--r"></div>
+  <div class="loader__in"><span class="loader__floor" id="loaderFloor">03</span><span class="loader__txt">Llamando al ascensor…</span></div>
+</div>
+
+<!-- Cursor: marca de altura que sigue al mouse -->
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__line"></span><span class="cursor__dot"></span><span class="cursor__val" id="cursorVal">0,00 m</span></div>
+
+<!-- Encabezado -->
+<header class="top" id="top">
+  <a class="top__logo" href="#pb" aria-label="ALTO, volver a planta baja"><span>ALTO</span></a>
+  <nav class="top__nav" aria-label="Principal">
+    <a href="#torre">Trabajos</a><a href="#paquetes">A medida</a><a href="#plantillas">Plantillas</a><a href="#terraza">La Terraza</a>
+  </nav>
+  <a class="btn btn--dark btn--sm magnet" href="#terraza" data-hover="Subiendo…"><span>Subamos</span></a>
+</header>
+
+<!-- Indicador de ascensor -->
+<aside class="elevator" aria-live="polite" aria-label="Piso actual">
+  <span class="elevator__arrow" id="evArrow">▲</span>
+  <span class="elevator__floor" id="evFloor">PB</span>
+  <span class="elevator__name" id="evName">Planta baja</span>
+  <span class="elevator__m" id="evM">0,00 m</span>
+</aside>
+
+<main id="main">
+
+<!-- ================= PB · HERO ================= -->
+<section class="hero floor" id="pb" data-floor="PB" data-name="Planta baja" data-sky="dia">
+  <div class="hero__ruler" aria-hidden="true">
+    <span class="hero__mark" id="heroMark"><i></i><b id="heroMarkVal">2,10</b></span>
+    <ol><li>2,10</li><li></li><li></li><li>1,40</li><li></li><li></li><li>0,70</li><li></li><li></li><li>0,00</li></ol>
+  </div>
+
+  <div class="wrap hero__grid">
+    <p class="hero__kicker lbl">Estudio de diseño web UX/UI · Argentina y LATAM</p>
+    <h1 class="hero__title" aria-label="Altas webs.">
+      <span class="line"><span class="w">ALTAS</span></span>
+      <span class="line"><span class="w">WEBS.</span></span>
+    </h1>
+
+    <div class="sun" id="sun">
+      <div class="sun__disc">
+        <canvas id="reel" aria-label="Animación: un edificio que se construye piso por piso"></canvas>
+        <video id="sunVideo" muted loop playsinline preload="none" hidden></video>
+        <span class="sun__glow"></span>
+      </div>
+      <svg class="sun__ring" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="ringPath" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs>
+        <text><textPath href="#ringPath" textLength="548" lengthAdjust="spacing">DISEÑO WEB · UX/UI · LANDINGS · UN PISO MÁS ARRIBA · </textPath></text>
+      </svg>
+    </div>
+
+    <div class="stop sticker" aria-hidden="true"><span>+1</span><small>piso</small></div>
+
+    <div class="hero__foot">
+      <p class="hero__slogan">Alto nivel para marcas que van alto. <span>Landings y webs que se ven pro y venden, listas en 7 días.</span></p>
+      <div class="hero__btns">
+        <a class="btn btn--blue magnet" href="#terraza" data-hover="Subiendo…"><span>Subamos ↑</span></a>
+        <a class="btn btn--ghost magnet" href="#torre" data-hover="Mirá abajo"><span>Ver desde arriba</span></a>
+      </div>
+    </div>
+  </div>
+  <p class="hero__hint mono" aria-hidden="true">Subí ↑</p>
+</section>
+
+<!-- ================= PISO 1 · SERVICIOS ================= -->
+<section class="services floor" id="servicios" data-floor="01" data-name="Servicios" data-sky="dia" aria-label="Servicios">
+  <div class="marquee marquee--blue" data-dir="-1"><div class="marquee__track" id="mq1"></div></div>
+  <div class="marquee marquee--gold" data-dir="1"><div class="marquee__track" id="mq2"></div></div>
+  <div class="wrap manifesto">
+    <p class="lbl">Lo que hacemos</p>
+    <h2 class="manifesto__text split">Lo simple, bien diseñado, se ve enorme.</h2>
+    <p class="manifesto__sub">No hace falta agregar más cosas. Hace falta que cada cosa esté donde tiene que estar. Eso es UX/UI: que tu cliente entienda en tres segundos y quiera quedarse.</p>
+  </div>
+</section>
+
+<!-- ================= PISO 2 · LA TORRE ================= -->
+<section class="tower floor" id="torre" data-floor="02" data-name="La Torre" data-sky="dia">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono sec-head__n">Piso 02</span>
+      <h2 class="sec-head__t split">La Torre</h2>
+      <p class="sec-head__s">Cada proyecto es un piso más. Pasá el mouse para verlo desde adentro.</p>
+    </div>
+    <ol class="tower__list" id="towerList"></ol>
+  </div>
+  <div class="preview" id="preview" aria-hidden="true"><div class="preview__in" id="previewIn"></div></div>
+</section>
+
+<!-- ================= PISO 3 · ANTES Y DESPUÉS ================= -->
+<section class="ba-sec floor" id="antes" data-floor="03" data-name="Antes y después" data-sky="atardecer">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono sec-head__n">Piso 03</span>
+      <h2 class="sec-head__t split">Misma marca. Otra liga.</h2>
+      <p class="sec-head__s">Arrastrá la manija. A la derecha, una tienda de plantilla como cualquier otra. A la izquierda, Rommer: una marca que no se olvida.</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba" id="ba" tabindex="0" role="slider" aria-label="Comparar antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="58">
+        <!-- ANTES: una tienda de plantilla genérica (ilustrativo) -->
+        <div class="ba__pane ba__before" aria-hidden="true">
+          <div class="old">
+            <div class="old__store">
+              <div class="old__top"><b>ROMMER</b><span>Inicio | Productos | Ofertas | Contacto</span></div>
+              <p class="old__hi">Bienvenidos a nuestra tienda online</p>
+              <div class="old__grid"><div><i></i><span>Shampoo 1</span><small>$ ----</small></div><div><i></i><span>Shampoo 2</span><small>$ ----</small></div><div><i></i><span>Protector</span><small>$ ----</small></div></div>
+            </div>
+          </div>
+        </div>
+        <!-- DESPUÉS: la web real de Rommer -->
+        <div class="ba__pane ba__after" aria-hidden="true">
+          <img src="assets/img/rommer-web.webp" alt="" width="1440" height="900" loading="lazy" decoding="async">
+        </div>
+        <div class="ba__handle" aria-hidden="true"><span>◀ ▶</span></div>
+        <span class="ba__tag ba__tag--l mono">Después · Rommer</span><span class="ba__tag ba__tag--r mono">Antes · ilustrativo</span>
+      </div>
+      <div class="meter" id="meter">
+        <div class="meter__bars">
+          <span class="meter__line" aria-hidden="true"></span>
+          <div class="meter__col"><i class="meter__bar meter__bar--before" style="--h:57%"></i><span class="mono">Antes · 1,20 m</span></div>
+          <div class="meter__col"><i class="meter__bar meter__bar--after" style="--h:100%"></i><span class="mono">Después · 2,10 m</span></div>
+        </div>
+        <ul class="meter__stats">
+          <li><b>Rutina</b><span>que guía la compra paso a paso</span></li>
+          <li><b>Kits</b><span>con descuento que suben el ticket</span></li>
+          <li><b>1 toque</b><span>a WhatsApp desde cualquier pantalla</span></li>
+        </ul>
+        <p class="note mono">Proyecto real: Rommer, cuidado capilar. El "antes" es ilustrativo. <a href="https://ailurmz.github.io/rommer-web-v5/" target="_blank" rel="noopener">Ver la web ↗</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PISO 4 · CÓMO TRABAJAMOS (sección fija) ================= -->
+<section class="process floor" id="proceso" data-floor="04" data-name="Cómo trabajamos" data-sky="atardecer">
+  <div class="process__pin">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="mono sec-head__n">Piso 04</span>
+        <h2 class="sec-head__t split">Subimos juntos, piso por piso.</h2>
+      </div>
+      <div class="shaft" aria-hidden="true"><span class="shaft__car" id="car"></span></div>
+      <ol class="stops" id="stops">
+        <li class="stop-card is-on"><span class="mono">Parada 1</span><h3>Contanos tu idea</h3><p>Escribinos por WhatsApp o por el formulario: qué vendés y qué querés lograr. Pasanos tu logo, colores e identidad. ¿No tenés? La armamos.</p></li>
+        <li class="stop-card"><span class="mono">Parada 2</span><h3>Propuesta en 48 h</h3><p>Te mandamos la estructura de tu web, precio cerrado y fecha de entrega.</p></li>
+        <li class="stop-card"><span class="mono">Parada 3</span><h3>Diseño con 2 rondas</h3><p>Ves tu web armada y la ajustamos dos veces hasta que te encante.</p></li>
+        <li class="stop-card"><span class="mono">Parada 4</span><h3>Publicación</h3><p>La publicamos, la conectamos a WhatsApp y te enseñamos a editar tus textos.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PISO 5 · PAQUETES ================= -->
+<section class="packs floor" id="paquetes" data-floor="05" data-name="Paquetes" data-sky="noche">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono sec-head__n">Piso 05</span>
+      <h2 class="sec-head__t split">¿Hasta qué piso subimos?</h2>
+      <p class="sec-head__s">Precio cerrado, plazo a la vista. Diseño de agencia sin precio de agencia.</p>
+    </div>
+    <div class="packs__grid" id="packs"></div>
+    <div class="needs">
+      <div class="needs__a">
+        <span class="mono">Para arrancar</span>
+        <h3>Pasanos tu logo, tus colores y tu identidad de marca.</h3>
+        <p>Con eso diseñamos tu web sobre plantillas propias, adaptadas a tu marca y a tu preferencia. Nada de diseños de catálogo.</p>
+        <ul class="needs__list"><li>Logo (ideal en PNG o SVG)</li><li>Colores y tipografías</li><li>Fotos y textos, o te ayudamos a armarlos</li></ul>
+      </div>
+      <div class="needs__b">
+        <span class="mono">¿No tenés identidad de marca?</span>
+        <h3>La armamos con vos.</h3>
+        <p>Logo, colores y tipografías, con hasta 3 propuestas según lo que nos pidas. Se suma a cualquier web y arrancás con una identidad propia.</p>
+        <p class="needs__price"><b>80</b> USD</p>
+        <a class="btn btn--dark magnet" href="#terraza" data-brand="1" data-hover="Arranquemos"><span>Quiero mi marca también</span></a>
+      </div>
+    </div>
+  
+    <div class="extras">
+      <div class="extras__head"><span class="mono">Extras</span><h3>Sumale lo que necesites.</h3><p>Dominio y hosting van a tu nombre y los pagás directo al proveedor. Si querés, los gestionamos nosotros.</p></div>
+      <ul class="extras__list" id="extras"></ul>
+    </div>
+
+    <div class="vs">
+      <p class="vs__lead">Precios de emprendedor. <span>Calidad de agencia.</span></p>
+      <p class="vs__sub">Cobramos lo justo a propósito: queremos que más emprendedores tengan una web que se vea pro desde el primer día. Mismo nivel de diseño que una agencia grande, sin la estructura que encarece todo.</p>
+      <ul class="vs__list">
+        <li><b>Diseño profesional</b><span>UX/UI pensado para que tu cliente entienda y te escriba.</span></li>
+        <li><b>Precio cerrado</b><span>Lo que ves es lo que pagás. Sin sorpresas.</span></li>
+        <li><b>Plazo a la vista</b><span>7, 10 o 15 días según el paquete.</span></li>
+        <li><b>Soporte incluido</b><span>De 15 a 60 días después de publicar.</span></li>
+      </ul>
+    </div>
+
+    <div class="pay">
+      <div class="pay__head"><span class="mono">Formas de pago</span><h3>Pagá como te quede cómodo.</h3></div>
+      <ul class="pay__list">
+        <li><b>Mercado Pago</b><span>Tarjeta de crédito en cuotas, débito o dinero en cuenta.</span></li>
+        <li><b>Transferencia</b><span>Bancaria o desde cualquier billetera virtual.</span></li>
+        <li><b>Desde el exterior</b><span>PayPal, con tarjeta de cualquier país.</span></li>
+      </ul>
+      <p class="pay__note"><b>Ejecutivo:</b> hasta 3 cuotas. <b>Express y Panorámico:</b> 50 % para arrancar y 50 % antes de publicar, cuando ya viste tu web terminada. <b>Plantillas:</b> pago único antes de la entrega. Siempre con comprobante.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PISO 6 · OPINIONES ================= -->
+<section class="tpls floor" id="plantillas" data-floor="06" data-name="Plantillas" data-sky="noche">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono sec-head__n">Piso 06</span>
+      <h2 class="sec-head__t split">Listas para subir.</h2>
+      <p class="sec-head__s">Diseños llamativos, hechos por ALTO con el mismo nivel que nuestras webs a medida. Mirá la demo, elegí la tuya, cargá tus textos y fotos, y publicá una web que impacta, por mucho menos. Si preferís, te la instalamos nosotros.</p>
+    </div>
+    <ul class="perks">
+      <li><b>Diseño que llama la atención</b><span>Nada de plantillas de catálogo: tipografía grande, color y movimiento.</span></li>
+      <li><b>La misma calidad</b><span>Las diseñamos con el mismo cuidado que una web a medida. Se ve pro desde el primer día.</span></li>
+      <li><b>Guía en PDF incluida</b><span>Paso a paso para cambiar textos, fotos y colores sin saber programar.</span></li>
+      <li><b>100 % editable</b><span>Cambiás todo desde WordPress y sumás plugins como WhatsApp, reservas o tienda online.</span></li>
+    </ul>
+    <div class="tpls__grid" id="tpls"></div>
+  </div>
+</section>
+
+<section class="reviews floor" hidden id="opiniones" data-floor="07" data-name="Opiniones" data-sky="noche">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono sec-head__n">Piso 07</span>
+      <h2 class="sec-head__t split">Lo que se ve desde arriba.</h2>
+    </div>
+    <div class="reviews__grid" id="reviews"></div>
+  </div>
+</section>
+
+<!-- ================= PISO 7 · DESPUÉS DE COMPRAR ================= -->
+<section class="after floor" id="despues" data-floor="07" data-name="Después de comprar" data-sky="noche">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono sec-head__n">Piso 07</span>
+      <h2 class="sec-head__t split">Dos pasos y listo.</h2>
+      <p class="sec-head__s">Para que tu web viva en internet necesitás un hosting y un dominio. Son dos pasos muy simples, y te mandamos un manual para cada uno.</p>
+    </div>
+    <ol class="after__steps">
+      <li><span class="mono">Paso 1</span><b>Contratá tu hosting</b><span>Te recomendamos Hostinger: es simple, rápido y tiene soporte en español.</span></li>
+      <li><span class="mono">Paso 2</span><b>Registrá tu dominio</b><span>Tu dirección en internet, como tumarca.com.ar. Si preferís, lo gestionamos por vos por 10 USD.</span></li>
+    </ol>
+    <p class="after__then">Una vez que tenés eso, <span>nosotros hacemos el resto.</span></p>
+    <div class="after__grid">
+      <div class="after__card">
+        <span class="mono">Si compraste una plantilla</span>
+        <h3>Te mandamos tu plantilla lista para editar.</h3>
+        <p>Recibís el archivo .zip de tu plantilla y un manual en PDF que te explica cómo instalarla y cambiar textos, fotos y colores. Si preferís, te la instalamos por 20 USD.</p>
+      </div>
+      <div class="after__card is-main">
+        <span class="mono">Si elegiste una web a medida</span>
+        <h3>Te entregamos tu web funcionando.</h3>
+        <p>Con dominio, hosting, WhatsApp y todo conectado. Lista para que la compartas y la edites cuando quieras.</p>
+      </div>
+    </div>
+    <ul class="after__docs">
+      <li><b>Manual de hosting y dominio</b><span>Cómo contratar Hostinger y registrar tu dominio, paso a paso.</span></li>
+      <li><b>Manual de tu web</b><span>Cómo editar textos, fotos, colores y conectar tu WhatsApp.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= TERRAZA · CONTACTO ================= -->
+<section class="terrace floor" id="terraza" data-floor="T" data-name="Terraza" data-sky="noche">
+  <div class="wrap terrace__grid">
+    <div class="terrace__copy">
+      <span class="mono sec-head__n">Terraza</span>
+      <h2 class="terrace__t split">Llegaste a la terraza.</h2>
+      <p class="terrace__s">Desde acá se ve todo. Contanos tu proyecto: por mensaje o llamada te pasamos en limpio lo que necesitás y el precio final, en menos de 24 h.</p>
+      <ul class="direct" id="direct"></ul>
+    </div>
+    <form class="form" id="form" novalidate>
+      <div class="field"><label for="fNombre">Tu nombre</label><input id="fNombre" name="nombre" autocomplete="name" required placeholder="Cómo te llamás"></div>
+      <div class="field"><label for="fMarca">¿A qué se dedica tu negocio? <small>(opcional)</small></label><input id="fMarca" name="marca" placeholder="Ej: tienda de ropa, consultorio, gastronomía"></div>
+      <div class="field"><label for="fPaquete">Qué necesitás</label><select id="fPaquete" name="paquete"></select></div>
+      <label class="check" for="fMarcaNueva"><input type="checkbox" id="fMarcaNueva" name="marcaNueva"><span>No tengo logo ni identidad de marca: quiero que la armen.</span></label>
+      <div class="field"><label for="fMsj">Contanos más <small>(opcional)</small></label><textarea id="fMsj" name="mensaje" rows="3" placeholder="Qué vendés, para cuándo lo necesitás…"></textarea></div>
+      <p class="form__err" id="fErr" role="alert" hidden>Poné tu nombre así sabemos a quién responderle.</p>
+      <a class="btn btn--ember btn--lg magnet" id="waBtn" href="#" target="_blank" rel="noopener" data-hover="Abriendo WhatsApp…"><span>Mandanos tu mensaje</span></a>
+      <p class="form__ok mono" id="fOk" hidden>Listo. Te escribimos en menos de 24 h.</p>
+      <p class="form__help">Se abre WhatsApp con tu mensaje armado. Lo enviás y te respondemos con el detalle y el precio final.</p>
+    </form>
+  </div>
+  <div class="marquee marquee--gold marquee--foot" data-dir="-1"><div class="marquee__track" id="mq3"></div></div>
+  <footer class="foot wrap">
+    <span class="foot__logo">ALTO</span>
+    <span>Alto nivel para marcas que van alto.</span>
+    <span class="foot__by">Diseñado y desarrollado por <a href="https://ailurmz.github.io/" target="_blank" rel="noopener">Ailen Ramírez</a>, fundadora y directora creativa de ALTO ↗</span>
+    <span class="mono">© 2026 · altoagencia.com</span>
+  </footer>
+</section>
+
+</main>
+
+<!-- Librerías (versiones fijas). Si no cargan, la web igual funciona sin animaciones. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<!-- Nuestro código -->
+<script src="js/data.js" defer></script>
+<script src="js/sky.js" defer></script>
+<script src="js/reel.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
