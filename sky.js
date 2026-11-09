@@ -32,14 +32,16 @@
     // arriba / abajo para día, atardecer y noche (colores del manual)
     " vec3 top=sky(s,vec3(.949,.933,.902),vec3(.965,.80,.60),vec3(.043,.051,.165));",
     " vec3 bot=sky(s,vec3(.975,.935,.86),vec3(1.,.66,.44),vec3(.10,.08,.21));",
-    " float w=n(uv*vec2(2.2,3.)+vec2(t*.025,t*.018))*.6+n(uv*6.+t*.04)*.4;",
+    " float w=n(uv*vec2(2.2,3.)+vec2(t*.05,-t*.07))*.6+n(uv*6.+vec2(t*.06,-t*.09))*.4;",
     " vec3 col=mix(bot,top,smoothstep(-.1,1.1,uv.y+(w-.5)*.35));",
     // luz cálida que sigue al cursor
     " float ar=r.x/r.y;vec2 q=(uv-m)*vec2(ar,1.);float d=dot(q,q);",
     " vec3 gc=mix(vec3(1.,.77,.24),vec3(1.,.35,.12),s);",
     " col+=gc*exp(-d*5.)*(.08+.20*s);",
     // grano
-    " col+=(h(gl_FragCoord.xy+fract(t*7.)*91.)-.5)*.045;",
+    " float st=n(vec2(uv.x*1.6-t*.22,uv.y*16.+uv.x*5.-t*.35));",
+    " col+=mix(vec3(1.),gc,.4)*smoothstep(.6,.95,st)*(.05+.03*s);",
+    " col+=(h(gl_FragCoord.xy+fract(t*9.)*91.)-.5)*.08;",
     " gl_FragColor=vec4(col,1.);",
     "}"
   ].join("\n");

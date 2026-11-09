@@ -118,8 +118,8 @@
 
   var sel = $("#fPaquete");
   if (sel) {
-    (DATA.paquetes || []).forEach(function (k) { var o = document.createElement("option"); o.value = "la web " + k.nombre; o.textContent = "Web a medida " + k.nombre; sel.appendChild(o); });
-    (DATA.plantillas || []).forEach(function (t) { var o = document.createElement("option"); o.value = "la plantilla " + t.nombre; o.textContent = "Diseño listo " + t.nombre.replace(" Lista", ""); sel.appendChild(o); });
+    (DATA.paquetes || []).forEach(function (k) { var o = document.createElement("option"); o.value = "la web " + k.nombre; o.textContent = k.nombre; sel.appendChild(o); });
+    (DATA.plantillas || []).forEach(function (t) { var o = document.createElement("option"); o.value = "la plantilla " + t.nombre; o.textContent = "Plantilla para descargar: " + t.nombre; sel.appendChild(o); });
     var o2 = document.createElement("option"); o2.value = "todavía no sé qué paquete"; o2.textContent = "Todavía no sé"; sel.appendChild(o2);
   }
 
@@ -290,7 +290,7 @@
     var nb = e.target.closest && e.target.closest("[data-brand]"); if (nb && fB) { fB.checked = true; refresh(); return; }
     var b = e.target.closest && e.target.closest("[data-pack]"); if (!b || !fP) return;
     var k = (DATA.paquetes || []).filter(function (x) { return x.id === b.dataset.pack; })[0];
-    if (k) { fP.value = "la web " + k.nombre; refresh(); }
+    if (k) { fP.value = "la " + k.nombre; refresh(); }
   });
 
   /* ---------- 11. Scroll suave + animaciones ---------- */
