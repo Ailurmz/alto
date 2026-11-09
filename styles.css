@@ -661,3 +661,54 @@ body .needs__b .btn{justify-self:start;--bg:var(--noche);--fg:var(--dorado)}
 
 /* capa de vuelo: viento, nubes, avión de papel y pájaros */
 #vuelo{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+
+/* ===== Plantillas ALTO: Pro y Esenciales ===== */
+.lvl{display:grid;gap:18px;margin-bottom:44px}
+.lvl__head{display:grid;gap:6px;max-width:760px}
+.lvl__head .mono{font-size:12px;color:var(--azul)}
+.lvl--pro .lvl__head .mono{color:var(--brasa)}
+.lvl__head h3{font-family:var(--display);font-weight:400;font-size:clamp(32px,4vw,56px);line-height:.95;text-transform:uppercase}
+.lvl__head p{color:var(--ink-soft,inherit)}
+.lvl__price{display:inline-block;margin-left:6px;font-family:var(--mono);font-size:13px;font-weight:400;background:var(--brasa);color:#fff;padding:4px 10px;border-radius:99px}
+.cat__grid{margin-bottom:0}
+.cat__more{justify-self:center;font:600 15px/1 var(--body);padding:14px 26px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:background-color .3s,color .3s}
+.cat__more:hover,.cat__more.is-open{background:var(--ink);color:var(--sky-bg,#F2EEE6)}
+.cat__more[hidden]{display:none}
+/* ===== Dudas frecuentes ===== */
+.faq__grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start}
+.faq .sec-head{position:sticky;top:110px}
+.faq__btn{margin-top:18px;justify-self:start}
+.faq__list{border-top:1px solid var(--line)}
+.faq__list details{border-bottom:1px solid var(--line)}
+.faq__list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:18px;padding:22px 0;font-weight:700;font-size:clamp(17px,1.5vw,20px)}
+.faq__list summary::-webkit-details-marker{display:none}
+.faq__list summary::after{content:"+";font-family:var(--mono);font-size:24px;color:var(--dorado);transition:transform .4s var(--ease);flex:none}
+.faq__list details[open] summary::after{transform:rotate(45deg)}
+.faq__list details p{padding:0 30px 22px 0;color:var(--ink-soft)}
+@media (max-width:900px){.faq__grid{grid-template-columns:1fr}.faq .sec-head{position:static}}
+
+/* ===== ¿Landing, Web o Empresarial? ===== */
+.cual{display:grid;gap:18px;margin:6px 0 30px}
+.cual__head{display:grid;gap:6px;max-width:720px}
+.cual__head .mono{font-size:12px;color:var(--dorado)}
+.cual__head h3{font-family:var(--display);font-weight:400;font-size:clamp(32px,4vw,54px);line-height:.95;text-transform:uppercase}
+.cual__head p{color:var(--ink-soft)}
+.cual__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cual__c{position:relative;display:grid;gap:10px;align-content:start;padding:26px 24px 24px;border-radius:22px;background:var(--panel);border:1px solid var(--line);overflow:hidden}
+.cual__c .mono{font-size:12px;color:var(--dorado)}
+.cual__c h4{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;text-transform:uppercase;margin:0}
+.cual__c p{color:var(--ink-soft);font-size:15px;margin:0}
+.cual__c ul{display:grid;gap:7px;margin:4px 0 0;padding:0;list-style:none}
+.cual__c li{font-size:14.5px;padding-left:22px;position:relative}
+.cual__c li::before{content:"✓";position:absolute;left:0;color:var(--dorado)}
+.cual__ej{font-size:13.5px!important;border-top:1px solid var(--line);padding-top:10px;margin-top:4px!important}
+.cual__ej b{color:var(--ink)}
+.cual-bldg{position:absolute;right:20px;top:22px;display:flex;flex-direction:column-reverse;gap:3px;width:34px}
+.cual-bldg i{display:block;height:6px;border-radius:2px;background:var(--dorado);opacity:.85;animation:cual-up .5s cubic-bezier(.22,1,.36,1) both}
+.cual-bldg i:nth-child(n+2){opacity:.6}
+.cual-bldg i:nth-child(odd){animation-delay:.08s}
+@keyframes cual-up{from{transform:scaleX(0)}}
+.cual__help{font-size:15px;color:var(--ink-soft)}
+.cual__help a{color:var(--dorado);font-weight:700}
+@media (max-width:900px){.cual__grid{grid-template-columns:1fr}}
+#cual{scroll-margin-top:120px}

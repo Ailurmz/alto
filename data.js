@@ -58,9 +58,12 @@ window.ALTO = {
 
   /* ---------- PRECIO DE DESCARGA (plantilla "hacelo vos") ----------
      Cuando tengas el link de Hotmart de cada demo, ponelo en la demo como descarga: "https://..." */
-  descarga: { landing: "49", web: "89", empresa: "149" },
+  descarga: { landing: "49", web: "89", empresa: "149" },  // (ya no se usa: ver niveles)
 
-  /* ---------- GENÉRICAS DESTACADAS (primera fila del catálogo) ----------
+  /* ---------- NIVELES DE PLANTILLAS: precio de descarga ---------- */
+  niveles: { pro: { precio: "80" }, esencial: { precio: "60" } },
+
+  /* ---------- PLANTILLAS PRO (primera fila del catálogo) ----------
      estado: "pronto" muestra la tarjeta "Muy pronto". Borralo cuando la demo esté publicada. */
   destacadas: [
     { tipo: "landing", slug: "surf",       nombre: "Marea",      rubro: "Escuela de surf y náutica",  bajada: "Agua en movimiento, olas y dibujos animados. Frescura pura.", color: "#00A6C8", color2: "#FFE7A3", estado: "pronto" },
@@ -116,19 +119,19 @@ window.ALTO = {
   /* ---------- PAQUETES ---------- */
   paquetes: [
     {
-      id: "Landing a medida", nombre: "Landing a medida", pago: "50 % + 50 %", precio: "200", moneda: "USD", desde: false, plazo: "7 días",
+      id: "Landing a medida", nombre: "Landing a medida", pago: "50 % + 50 %", precio: "", moneda: "", desde: false, plazo: "7 días",
       bajada: "Landing a medida. Directo al punto: una página pensada para vender y para hacer anuncios.",
       incluye: ["Hasta 7 secciones con diseño a medida", "WhatsApp flotante y formulario", "Píxel de Meta y Google Analytics instalados", "SEO base y carga rápida", "2 rondas de cambios y capacitación", "15 días de soporte"],
       destacado: false
     },
     {
-      id: "Web a medida", nombre: "Web a medida", pago: "50 % + 50 %", precio: "300", moneda: "USD", desde: false, plazo: "10 días",
+      id: "Web a medida", nombre: "Web a medida", pago: "50 % + 50 %", precio: "", moneda: "", desde: false, plazo: "10 días",
       bajada: "Web a medida. Todo tu negocio a la vista, en hasta 5 páginas. Incluye todo lo de Landing a medida.",
       incluye: ["Hasta 5 páginas", "Blog, galería o portfolio", "Google Maps y Google Business", "Avisos del formulario por email", "Píxel, Analytics y SEO base", "30 días de soporte"],
       destacado: true
     },
     {
-      id: "Empresa a medida", nombre: "Empresa a medida", pago: "Hasta 3 cuotas", precio: "450", moneda: "USD", desde: false, plazo: "15 días",
+      id: "Empresa a medida", nombre: "Empresa a medida", pago: "Hasta 3 cuotas", precio: "", moneda: "", desde: false, plazo: "15 días",
       bajada: "Web empresarial a medida, para mostrar todo lo que hacés. Incluye todo lo de Web a medida.",
       incluye: ["Hasta 10 páginas: servicios, equipo, clientes y casos", "Formularios de presupuesto por área", "SEO en cada página", "Animaciones a medida", "Preparada para sumar tienda online", "60 días de soporte y prioridad"],
       destacado: false
