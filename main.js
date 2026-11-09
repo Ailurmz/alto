@@ -118,8 +118,8 @@
 
   var sel = $("#fPaquete");
   if (sel) {
-    (DATA.paquetes || []).forEach(function (k) { var o = document.createElement("option"); o.value = "la web " + k.nombre; o.textContent = "Web " + k.nombre + (k.precio ? " · " + (k.desde ? "desde " : "") + k.precio + (k.moneda ? " " + k.moneda : "") : ""); sel.appendChild(o); });
-    (DATA.plantillas || []).forEach(function (t) { var o = document.createElement("option"); o.value = "la plantilla " + t.nombre; o.textContent = "Plantilla " + t.nombre + (t.precio ? " · " + t.precio + " " + (t.moneda || "") : ""); sel.appendChild(o); });
+    (DATA.paquetes || []).forEach(function (k) { var o = document.createElement("option"); o.value = "la web " + k.nombre; o.textContent = "Web a medida " + k.nombre; sel.appendChild(o); });
+    (DATA.plantillas || []).forEach(function (t) { var o = document.createElement("option"); o.value = "la plantilla " + t.nombre; o.textContent = "Diseño listo " + t.nombre.replace(" Lista", ""); sel.appendChild(o); });
     var o2 = document.createElement("option"); o2.value = "todavía no sé qué paquete"; o2.textContent = "Todavía no sé"; sel.appendChild(o2);
   }
 

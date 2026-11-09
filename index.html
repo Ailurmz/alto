@@ -63,7 +63,7 @@
 <header class="top" id="top">
   <a class="top__logo" href="#pb" aria-label="ALTO, volver a planta baja"><span>ALTO</span></a>
   <nav class="top__nav" aria-label="Principal">
-    <a href="#torre">Trabajos</a><a href="#paquetes">A medida</a><a href="#plantillas">Plantillas</a><a href="#terraza">La Terraza</a>
+    <a href="#catalogo">Elegí tu web</a><a href="#torre">Trabajos</a><a href="#paquetes">Precios</a><a href="#terraza">Contacto</a>
   </nav>
   <a class="btn btn--dark btn--sm magnet" href="#terraza" data-hover="Subiendo…"><span>Subamos</span></a>
 </header>
@@ -107,10 +107,10 @@
     <div class="stop sticker" aria-hidden="true"><span>+1</span><small>piso</small></div>
 
     <div class="hero__foot">
-      <p class="hero__slogan">Alto nivel para marcas que van alto. <span>Landings y webs que se ven pro y venden, listas en 7 días.</span></p>
+      <p class="hero__slogan">Alto nivel para marcas que van alto. <span>Elegí un diseño, lo adaptamos a tu marca y tu web queda online en pocos días. Simple, rápido y en cuotas.</span></p>
       <div class="hero__btns">
-        <a class="btn btn--blue magnet" href="#terraza" data-hover="Subiendo…"><span>Subamos ↑</span></a>
-        <a class="btn btn--ghost magnet" href="#torre" data-hover="Mirá abajo"><span>Ver desde arriba</span></a>
+        <a class="btn btn--blue magnet" href="#catalogo" data-hover="Mirá los diseños"><span>Elegí tu diseño ↑</span></a>
+        <a class="btn btn--ghost magnet" href="#torre" data-hover="Mirá abajo"><span>Ver trabajos</span></a>
       </div>
     </div>
   </div>
@@ -128,11 +128,33 @@
   </div>
 </section>
 
-<!-- ================= PISO 2 · LA TORRE ================= -->
-<section class="tower floor" id="torre" data-floor="02" data-name="La Torre" data-sky="dia">
+<!-- ================= PISO 2 · ELEGÍ TU WEB (catálogo de demos) ================= -->
+<section class="cat floor" id="catalogo" data-floor="02" data-name="Elegí tu web" data-sky="dia">
   <div class="wrap">
     <div class="sec-head">
       <span class="mono sec-head__n">Piso 02</span>
+      <h2 class="sec-head__t split">Elegí tu web.</h2>
+      <p class="sec-head__s">Mirá las demos, elegí la que más te guste y la adaptamos a tu marca: logo, colores, textos y fotos. Sin empezar de cero y sin vueltas.</p>
+    </div>
+    <div class="cat__tabs" role="tablist" id="catTabs"></div>
+    <p class="cat__meta" id="catMeta"></p>
+    <div class="cat__grid" id="catGrid"></div>
+    <ul class="perks cat__perks">
+      <li><b>Adaptada a tu marca</b><span>Tu logo, tus colores, tus fotos. Nadie va a notar que partió de una demo.</span></li>
+      <li><b>Online en pocos días</b><span>Sin meses de espera: elegís, nos pasás tu info y la publicamos.</span></li>
+      <li><b>100 % editable</b><span>Cambiás textos y fotos desde WordPress, con guía en PDF.</span></li>
+      <li><b>Pagás como te quede cómodo</b><span>En cuotas con Mercado Pago, o 50 % al empezar y 50 % al final.</span></li>
+    </ul>
+    <div class="cat__else"><p><b>¿No está tu rubro?</b> Todas las demos se adaptan a cualquier negocio. Y si querés algo 100 % a medida, también lo hacemos.</p>
+      <a class="btn btn--dark btn--sm magnet" href="#terraza" data-hover="Contanos"><span>Consultar sin compromiso</span></a></div>
+  </div>
+</section>
+
+<!-- ================= PISO 2 · LA TORRE ================= -->
+<section class="tower floor" id="torre" data-floor="03" data-name="La Torre" data-sky="dia">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono sec-head__n">Piso 03</span>
       <h2 class="sec-head__t split">La Torre</h2>
       <p class="sec-head__s">Cada proyecto es un piso más. Pasá el mouse para verlo desde adentro.</p>
     </div>
@@ -142,10 +164,10 @@
 </section>
 
 <!-- ================= PISO 3 · ANTES Y DESPUÉS ================= -->
-<section class="ba-sec floor" id="antes" data-floor="03" data-name="Antes y después" data-sky="atardecer">
+<section class="ba-sec floor" id="antes" data-floor="04" data-name="Antes y después" data-sky="atardecer">
   <div class="wrap">
     <div class="sec-head">
-      <span class="mono sec-head__n">Piso 03</span>
+      <span class="mono sec-head__n">Piso 04</span>
       <h2 class="sec-head__t split">Misma marca. Otra liga.</h2>
       <p class="sec-head__s">Arrastrá la manija. A la derecha, una tienda de plantilla como cualquier otra. A la izquierda, Rommer: una marca que no se olvida.</p>
     </div>
@@ -186,11 +208,11 @@
 </section>
 
 <!-- ================= PISO 4 · CÓMO TRABAJAMOS (sección fija) ================= -->
-<section class="process floor" id="proceso" data-floor="04" data-name="Cómo trabajamos" data-sky="atardecer">
+<section class="process floor" id="proceso" data-floor="05" data-name="Cómo trabajamos" data-sky="atardecer">
   <div class="process__pin">
     <div class="wrap">
       <div class="sec-head">
-        <span class="mono sec-head__n">Piso 04</span>
+        <span class="mono sec-head__n">Piso 05</span>
         <h2 class="sec-head__t split">Subimos juntos, piso por piso.</h2>
       </div>
       <div class="shaft" aria-hidden="true"><span class="shaft__car" id="car"></span></div>
@@ -205,14 +227,25 @@
 </section>
 
 <!-- ================= PISO 5 · PAQUETES ================= -->
-<section class="packs floor" id="paquetes" data-floor="05" data-name="Paquetes" data-sky="noche">
+<section class="packs floor" id="paquetes" data-floor="06" data-name="Precios" data-sky="noche">
   <div class="wrap">
     <div class="sec-head">
-      <span class="mono sec-head__n">Piso 05</span>
-      <h2 class="sec-head__t split">¿Hasta qué piso subimos?</h2>
-      <p class="sec-head__s">Precio cerrado, plazo a la vista. Diseño de agencia sin precio de agencia.</p>
+      <span class="mono sec-head__n">Piso 06</span>
+      <h2 class="sec-head__t split">Fácil de empezar.</h2>
+      <p class="sec-head__s">Precio cerrado, en cuotas y sin pagos mensuales obligatorios. Diseño de agencia, a precio de emprendedor.</p>
     </div>
-    <div class="packs__grid" id="packs"></div>
+    <div class="from">
+      <a class="from__c" href="#catalogo" data-cat="landing"><span class="mono">Landing</span><b>Una página que vende</b><em><small>desde</small> 80 <small>USD</small></em></a>
+      <a class="from__c" href="#catalogo" data-cat="web"><span class="mono">Web</span><b>Tu negocio completo</b><em><small>desde</small> 150 <small>USD</small></em></a>
+      <a class="from__c" href="#catalogo" data-cat="empresa"><span class="mono">Empresarial</span><b>Para pymes y empresas</b><em><small>desde</small> 250 <small>USD</small></em></a>
+    </div>
+    <details class="prices" id="precios">
+      <summary><span>Ver precios y formas de pago</span><i aria-hidden="true">+</i></summary>
+      <div class="prices__in">
+        <h3 class="prices__h">Diseños listos, adaptados a tu marca</h3>
+        <div class="tpls__grid" id="tpls"></div>
+        <h3 class="prices__h">Webs 100 % a medida</h3>
+<div class="packs__grid" id="packs"></div>
     <div class="needs">
       <div class="needs__a">
         <span class="mono">Para arrancar</span>
@@ -254,31 +287,18 @@
       </ul>
       <p class="pay__note"><b>Ejecutivo:</b> hasta 3 cuotas. <b>Express y Panorámico:</b> 50 % para arrancar y 50 % antes de publicar, cuando ya viste tu web terminada. <b>Plantillas:</b> pago único antes de la entrega. Siempre con comprobante.</p>
     </div>
+      </div>
+    </details>
   </div>
 </section>
 
 <!-- ================= PISO 6 · OPINIONES ================= -->
-<section class="tpls floor" id="plantillas" data-floor="06" data-name="Plantillas" data-sky="noche">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="mono sec-head__n">Piso 06</span>
-      <h2 class="sec-head__t split">Listas para subir.</h2>
-      <p class="sec-head__s">Diseños llamativos, hechos por ALTO con el mismo nivel que nuestras webs a medida. Mirá la demo, elegí la tuya, cargá tus textos y fotos, y publicá una web que impacta, por mucho menos. Si preferís, te la instalamos nosotros.</p>
-    </div>
-    <ul class="perks">
-      <li><b>Diseño que llama la atención</b><span>Nada de plantillas de catálogo: tipografía grande, color y movimiento.</span></li>
-      <li><b>La misma calidad</b><span>Las diseñamos con el mismo cuidado que una web a medida. Se ve pro desde el primer día.</span></li>
-      <li><b>Guía en PDF incluida</b><span>Paso a paso para cambiar textos, fotos y colores sin saber programar.</span></li>
-      <li><b>100 % editable</b><span>Cambiás todo desde WordPress y sumás plugins como WhatsApp, reservas o tienda online.</span></li>
-    </ul>
-    <div class="tpls__grid" id="tpls"></div>
-  </div>
-</section>
 
-<section class="reviews floor" hidden id="opiniones" data-floor="07" data-name="Opiniones" data-sky="noche">
+
+<section class="reviews floor" hidden id="opiniones" data-floor="08" data-name="Opiniones" data-sky="noche">
   <div class="wrap">
     <div class="sec-head">
-      <span class="mono sec-head__n">Piso 07</span>
+      <span class="mono sec-head__n">Piso 08</span>
       <h2 class="sec-head__t split">Lo que se ve desde arriba.</h2>
     </div>
     <div class="reviews__grid" id="reviews"></div>
@@ -357,6 +377,7 @@
 <script src="data.js" defer></script>
 <script src="sky.js" defer></script>
 <script src="reel.js" defer></script>
+<script src="catalogo.js" defer></script>
 <script src="main.js" defer></script>
 </body>
 </html>

@@ -46,6 +46,28 @@ window.ALTO = {
     { piso: "02", cliente: "Estudio Paz",     rubro: "Psicología",      tipo: "Landing",       anio: 2025, dias: 7,  link: "", imagen: "", color: "#FFC53D", ejemplo: true }
   ],
 
+
+  /* ---------- CATÁLOGO DE DEMOS (piso 02 "Elegí tu web") ----------
+     tipo: "landing", "web" o "empresa". slug: nombre del archivo demo-SLUG.html
+     Para sumar una demo: copiá una línea, cambiá los datos y subí demo-SLUG.html y cat-SLUG.webp */
+  tiposDemo: {
+    landing: { nombre: "Landings", desde: "80", plazo: "Lista en 72 h", bajada: "Una sola página pensada para vender, lanzar o recibir reservas." },
+    web:     { nombre: "Webs", desde: "150", plazo: "Lista en 5 días", bajada: "Tu negocio completo: quién sos, qué hacés, trabajos y contacto." },
+    empresa: { nombre: "Empresariales", desde: "250", plazo: "Lista en 7 días", bajada: "Para pymes y empresas: servicios, proyectos, clientes y presupuestos." }
+  },
+  demos: [
+    { tipo: "landing", slug: "estetica",     nombre: "Lumière",      rubro: "Estética y belleza" },
+    { tipo: "landing", slug: "burger",       nombre: "Brasa",        rubro: "Gastronomía y delivery" },
+    { tipo: "landing", slug: "auriculares",  nombre: "Aura",         rubro: "Lanzamiento de producto" },
+    { tipo: "web",     slug: "psicologia",   nombre: "Sofía Marín",  rubro: "Psicología y salud" },
+    { tipo: "web",     slug: "estudio",      nombre: "Ferrer",       rubro: "Estudio jurídico o contable" },
+    { tipo: "web",     slug: "fotografia",   nombre: "Tomás Rey",    rubro: "Fotografía y creativos" },
+    { tipo: "web",     slug: "gimnasio",     nombre: "Norte Fit",    rubro: "Gimnasio y entrenamiento" },
+    { tipo: "empresa", slug: "constructora", nombre: "Cimientos",    rubro: "Constructora" },
+    { tipo: "empresa", slug: "inmobiliaria", nombre: "Hábitat",      rubro: "Inmobiliaria" },
+    { tipo: "empresa", slug: "logistica",    nombre: "Vía",          rubro: "Industria y logística" }
+  ],
+
   /* ---------- PAQUETES ---------- */
   paquetes: [
     {
@@ -88,11 +110,11 @@ window.ALTO = {
        Si lo dejás vacío, el botón dice "Demo pronto".
      estilo: "a", "b" o "c" (cambia el dibujo de la tarjeta).                  */
   plantillas: [
-    { id: "Landing Lista", nombre: "Landing Lista", ideal: "lanzar un producto o servicio", precio: "80", moneda: "USD", demo: "", color: "#2B3BFF", estilo: "a",
+    { id: "Landing Lista", nombre: "Landing Lista", ideal: "lanzar un producto o servicio", precio: "80", moneda: "USD", demo: "demo-estetica.html", color: "#2B3BFF", estilo: "a",
       incluye: ["1 página de 6 secciones", "100 % editable desde WordPress", "Sumá plugins como WhatsApp o formularios", "Perfecta en celular", "Guía en PDF para editarla"] },
-    { id: "Web Lista", nombre: "Web Lista", ideal: "emprendedores y profesionales", precio: "150", moneda: "USD", demo: "", color: "#FF5A1F", estilo: "b",
+    { id: "Web Lista", nombre: "Web Lista", ideal: "emprendedores y profesionales", precio: "150", moneda: "USD", demo: "demo-psicologia.html", color: "#FF5A1F", estilo: "b",
       incluye: ["Hasta 5 páginas", "100 % editable desde WordPress", "Sumá plugins como WhatsApp, reservas o tienda", "Galería o blog", "Guía en PDF para editarla"] },
-    { id: "Empresa Lista", nombre: "Empresa Lista", ideal: "pymes y empresas", precio: "250", moneda: "USD", demo: "", color: "#FFC53D", estilo: "c",
+    { id: "Empresa Lista", nombre: "Empresa Lista", ideal: "pymes y empresas", precio: "250", moneda: "USD", demo: "demo-constructora.html", color: "#FFC53D", estilo: "c",
       incluye: ["Hasta 8 páginas: servicios, equipo, clientes", "100 % editable desde WordPress", "Lista para sumar tienda online", "Formularios de contacto y presupuesto", "Guía en PDF para editarla"] }
   ],
 
