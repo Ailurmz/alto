@@ -7,7 +7,9 @@
 <meta name="description" content="ALTO es un estudio de diseño web UX/UI. Landings y webs con impacto visual para emprendedores y pymes de Argentina y LATAM. Webs online en 72 horas desde 120 USD.">
 <meta name="theme-color" content="#2B3BFF">
 <link rel="canonical" href="https://altoagencia.com/">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-nubi.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <!-- Open Graph: así se ve el link cuando lo compartís por WhatsApp o redes -->
 <meta property="og:type" content="website">
@@ -53,7 +55,7 @@
 <!-- Carga inicial: puertas de ascensor -->
 <div class="loader" id="loader" aria-hidden="true">
   <div class="door door--l"></div><div class="door door--r"></div>
-  <div class="loader__in"><span class="loader__floor" id="loaderFloor">03</span><span class="loader__txt">Llamando al ascensor…</span></div>
+  <div class="loader__in"><span class="loader__floor" id="loaderFloor">03</span><span class="loader__txt">¿Listos para subir? ↑</span></div>
 </div>
 
 <!-- Cursor: marca de altura que sigue al mouse -->
@@ -63,7 +65,7 @@
 <header class="top" id="top">
   <a class="top__logo" href="#pb" aria-label="ALTO, volver a planta baja"><span>ALTO</span></a>
   <nav class="top__nav" aria-label="Principal">
-    <a href="#catalogo">Plantillas</a><a href="#torre">Trabajos</a><a href="#paquetes">Web 72 h</a><a href="#dudas">Dudas</a><a href="#terraza">Contacto</a>
+    <a href="#catalogo">Plantillas</a><a href="#torre">Trabajos</a><a href="#paquetes">Precios</a><a href="#dudas">Dudas</a><a href="#terraza">Contacto</a>
   </nav>
   <a class="btn btn--dark btn--sm magnet" href="#terraza" data-hover="Subiendo…"><span>Subamos</span></a>
 </header>
@@ -125,6 +127,13 @@
     <p class="lbl">Lo que hacemos</p>
     <h2 class="manifesto__text split">Lo simple, bien diseñado, se ve enorme.</h2>
     <p class="manifesto__sub">No hace falta agregar más cosas. Hace falta que cada cosa esté donde tiene que estar. Eso es UX/UI: que tu cliente entienda en tres segundos y quiera quedarse.</p>
+    <div class="soon-floor">
+      <span class="mono soon-floor__tag">✦ Próximo lanzamiento</span>
+      <h3>Muy pronto: producción audiovisual y contenido para redes.</h3>
+      <p>Filmmaker, reels, fotos de producto y contenido para que tu marca también se vea en movimiento.</p>
+      <ul><li>Filmmaker</li><li>Reels y videos cortos</li><li>Fotos de producto</li><li>Contenido para redes</li></ul>
+      <a class="btn btn--dark btn--sm magnet" href="https://wa.me/5491140585229?text=Hola%20ALTO%2C%20avisame%20cuando%20lancen%20el%20servicio%20de%20filmmaker%20y%20creaci%C3%B3n%20de%20contenido." target="_blank" rel="noopener" data-hover="Te avisamos"><span>Avisame cuando esté</span></a>
+    </div>
   </div>
 </section>
 
@@ -143,8 +152,9 @@
     <div class="lvl lvl--esen">
       <div class="lvl__head"><span class="mono">Esenciales</span><h3>Simples, prolijas y listas para arrancar.</h3><p>Igual de profesionales, con lo justo para empezar a vender.</p></div>
       <div class="cat__grid" id="catEsen"></div>
-      <button type="button" class="cat__more" id="catMore"></button>
+      
     </div>
+    <button type="button" class="cat__more" id="catMore"></button>
     <ul class="perks cat__perks">
       <li><b>Adaptada a tu marca</b><span>Tu logo, tus colores, tus fotos. Nadie va a notar que partió de una plantilla.</span></li>
       <li><b>Online en 72 horas</b><span>Si preferís que lo hagamos nosotros: elegís, nos pasás tu material y la publicamos.</span></li>
@@ -237,21 +247,51 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="mono sec-head__n">Piso 06</span>
-      <h2 class="sec-head__t split">Web 72 h.</h2>
-      <p class="sec-head__s">Tu competencia ya tiene web. Vos, en 72 horas. Elegís una plantilla y la adaptamos a tu marca.</p>
-      <p class="w72__from">Desde <b>120</b> USD · 50 % para arrancar y 50 % cuando la ves terminada.</p>
+      <h2 class="sec-head__t split">¿Cómo querés tu web?</h2>
+      <p class="sec-head__s">Tu competencia ya tiene web. Vos, en 72 horas. Elegí cómo la querés: hacela vos, te la armamos o la diseñamos desde cero.</p>
     </div>
 
     <div class="launch" id="launch" hidden></div>
+    <div class="paths" id="caminos">
+      <article class="path">
+        <span class="path__n">Opción 1</span><h3>La armo yo</h3>
+        <p class="path__sub">Plantilla para descargar</p>
+        <p class="path__price"><b>60–80</b><small>USD</small></p>
+        <p class="path__time">Al instante</p>
+        <ul><li>La plantilla que elijas del catálogo</li><li>La editás vos en WordPress</li><li>Guía en PDF paso a paso</li></ul>
+        <p class="path__for">Elegila si sabés usar WordPress y querés ahorrar.</p>
+        <a class="btn btn--ghost btn--sm magnet" href="#catalogo" data-hover="Elegí"><span>Ver plantillas</span></a>
+      </article>
+      <article class="path is-top">
+        <span class="path__flag">La más elegida</span>
+        <span class="path__n">Opción 2</span><h3>Te la armamos</h3>
+        <p class="path__sub">Plantilla + tu marca</p>
+        <p class="path__price"><small>desde</small><b>120</b><small>USD</small></p>
+        <p class="path__time">Online en 72 h</p>
+        <ul><li>La plantilla que elijas, adaptada por nosotros</li><li>Tu logo, colores, textos y fotos</li><li>WhatsApp, Píxel, Analytics y SEO base</li><li>1 ronda de ajustes y 15 días de soporte</li></ul>
+        <p class="path__call">📞 Arrancamos con una videollamada de 15 minutos para entender lo que querés.</p>
+        <p class="path__for">Elegila si querés estar online ya, sin hacer nada.</p>
+        <a class="btn btn--ember btn--sm magnet" href="#catalogo" data-hover="¡Vamos!"><span>Elegir mi plantilla</span></a>
+      </article>
+      <article class="path">
+        <span class="path__n">Opción 3</span><h3>Diseño único</h3>
+        <p class="path__sub">A medida, desde cero</p>
+        <p class="path__price"><small>desde</small><b>200</b><small>USD</small></p>
+        <p class="path__time">7 a 15 días</p>
+        <ul><li>Diseñada solo para tu marca</li><li>Estructura, estilo y animaciones a medida</li><li>2 rondas de ajustes y hasta 60 días de soporte</li></ul>
+        <p class="path__call">📞 Arrancamos con una videollamada para conocer tu negocio y lo que necesitás.</p>
+        <p class="path__for">Elegila si querés algo que nadie más tenga.</p>
+        <a class="btn btn--ghost btn--sm magnet" href="https://wa.me/5491140585229?text=Hola%20ALTO%2C%20quiero%20una%20web%20con%20dise%C3%B1o%20%C3%BAnico%2C%20a%20medida.%20%C2%BFCoordinamos%20una%20llamada%3F" target="_blank" rel="noopener" data-hover="Hablemos"><span>Pedir propuesta</span></a>
+      </article>
+    </div>
+    <p class="paths__note"><b>Las opciones 1 y 2 usan el mismo diseño del catálogo: la diferencia es quién lo arma.</b> La opción 3 se diseña desde cero, solo para vos. Pagás 50 % para arrancar y 50 % cuando ves tu web terminada.</p>
+
+
     <div class="cual" id="cual">
       <div class="cual__head"><span class="mono">¿Cuál necesito?</span><h3>¿Landing, Web o Empresarial?</h3><p>La diferencia es cuántos pisos tiene tu web. Elegí según lo que querés lograr:</p></div>
       <div class="cual__grid"><article class="cual__c"><span class="cual-bldg" aria-hidden="true"><i></i></span><span class="mono">1 piso</span><h4>Landing</h4><p>Una sola página, enfocada en una sola cosa: que te escriban o te compren.</p><ul><li>Lanzás un producto, una promo o un servicio puntual</li><li>Hacés publicidad en Instagram o Facebook</li><li>Vendés o tomás turnos por WhatsApp</li></ul><p class="cual__ej"><b>Por ejemplo:</b> Delivery, estética, cursos, eventos</p></article><article class="cual__c"><span class="cual-bldg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="mono">Hasta 5 pisos</span><h4>Web</h4><p>Tu negocio completo, en varias páginas: inicio, quiénes somos, servicios, trabajos y contacto.</p><ul><li>Ofrecés varios servicios</li><li>Querés mostrar tus trabajos o tener un blog</li><li>Querés que te encuentren en Google</li></ul><p class="cual__ej"><b>Por ejemplo:</b> Consultorios, estudios, fotógrafos, gimnasios</p></article><article class="cual__c"><span class="cual-bldg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="mono">Hasta 10 pisos</span><h4>Empresarial</h4><p>La web institucional de tu empresa: servicios por área, proyectos, clientes, equipo y pedidos de presupuesto.</p><ul><li>Tenés equipo, varias áreas o sucursales</li><li>Le vendés a otras empresas</li><li>Necesitás transmitir trayectoria y confianza</li></ul><p class="cual__ej"><b>Por ejemplo:</b> Constructoras, inmobiliarias, industrias, logística</p></article></div>
       <p class="cual__help">¿Todavía no sabés? <a href="#asistente">Preguntale al ascensor</a> y te recomendamos en 1 minuto.</p>
     </div>
-    <div class="w72" id="w72"></div>
-    <ul class="w72__inc" id="w72inc"></ul>
-    <p class="w72__note mono" id="w72note"></p>
-
     <div class="add">
       <div class="add__head"><span class="mono">Sumale a tu web</span><h3>Que quede completa.</h3></div>
       <ul class="add__list" id="sumale"></ul>
@@ -270,15 +310,15 @@
         <span class="mono">¿No tenés identidad de marca?</span>
         <h3>La armamos con vos.</h3>
         <p>Logo, colores y tipografías, con hasta 3 propuestas. Así tu web queda estética y con una marca propia desde el primer día.</p>
-                <a class="btn btn--dark magnet" href="#despegue" data-hover="Arranquemos"><span>Quiero mi marca también</span></a>
+                <a class="btn btn--dark magnet" href="https://wa.me/5491140585229?text=Hola%20ALTO%2C%20no%20tengo%20identidad%20de%20marca%20y%20quiero%20que%20la%20armen%3A%20logo%2C%20colores%20y%20tipograf%C3%ADas.%20%C2%BFMe%20pasan%20una%20propuesta%3F" target="_blank" rel="noopener" data-hover="Arranquemos"><span>Quiero mi marca también</span></a>
       </div>
     </div>
 
     <div class="custom" id="a-medida">
       <div class="custom__head">
-        <span class="mono">A medida</span>
-        <h3>¿Preferís algo único?</h3>
-        <p>Diseñada desde cero, solo para tu marca. Contanos tu proyecto y te enviamos una propuesta en 24 horas.</p>
+        <span class="mono">Opción 3 · A medida</span>
+        <h3>Diseño único: elegí el tamaño.</h3>
+        <p>Opción 3 en detalle. Arrancamos con una videollamada para conocer tu negocio y te enviamos una propuesta en 24 horas.</p>
       </div>
       <div class="packs__grid" id="packs"></div>
     </div>
@@ -289,7 +329,7 @@
       <ul class="vs__list">
         <li><b>Diseño profesional</b><span>UX/UI pensado para que tu cliente entienda y te escriba.</span></li>
         <li><b>Precio cerrado</b><span>Te pasamos la propuesta antes de empezar. Sin sorpresas.</span></li>
-        <li><b>Plazo a la vista</b><span>72 horas tu Web 72 h. De 7 a 15 días las webs a medida.</span></li>
+        <li><b>Plazo a la vista</b><span>Al instante, en 72 horas o en 7 a 15 días, según la opción.</span></li>
         <li><b>Soporte incluido</b><span>De 15 a 60 días después de publicar.</span></li>
       </ul>
     </div>
@@ -301,7 +341,7 @@
         <li><b>Transferencia</b><span>Bancaria o desde cualquier billetera virtual.</span></li>
         <li><b>Desde el exterior</b><span>PayPal, con tarjeta de cualquier país.</span></li>
       </ul>
-      <p class="pay__note"><b>Web 72 h y Landing o Web a medida:</b> 50 % para arrancar y 50 % cuando ya viste tu web terminada. <b>Empresa a medida:</b> hasta 3 cuotas. <b>Plantillas para descargar:</b> pago único. Siempre con comprobante.</p>
+      <p class="pay__note"><b>Opciones 2 y 3:</b> 50 % para arrancar y 50 % cuando ya viste tu web terminada. <b>Empresa a medida:</b> hasta 3 cuotas. <b>Opción 1:</b> pago único. <b>Plantillas para descargar:</b> pago único. Siempre con comprobante.</p>
     </div>
 
     <details class="prices" id="precios" hidden>
@@ -436,5 +476,8 @@
 <script src="catalogo.js" defer></script>
 <script src="main.js" defer></script>
 <script src="asistente.js" defer></script>
+<script src="y2k.js" defer></script>
+<script src="agenda.js" defer></script>
+<script src="elegir.js" defer></script>
 </body>
 </html>

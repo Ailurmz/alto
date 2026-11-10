@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 30 360 360"><defs>
+<pattern id="dotL" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="4.5" cy="4.5" r="1.7" fill="#2B3BFF"/></pattern>
+<pattern id="dotO" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" fill="#C24A00"/></pattern>
+<pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><path d="M0 0 v7" stroke="#2B3BFF" stroke-width="1.6"/></pattern>
+<clipPath id="cloudC"><circle cx="150" cy="230" r="70"/><circle cx="230" cy="190" r="88"/><circle cx="310" cy="220" r="72"/><circle cx="110" cy="290" r="56"/><circle cx="360" cy="285" r="54"/><circle cx="200" cy="300" r="80"/><circle cx="280" cy="300" r="78"/></clipPath>
+<clipPath id="lensC"><path d="M140 216 h192 l-8 42 q-6 20 -34 20 h-24 q-22 0 -28-20 l-4-12 q-4-5 -10 0 l-4 12 q-6 20 -28 20 h-24 q-28 0 -34-20z"/></clipPath>
+<filter id="dieK" x="-25%" y="-25%" width="150%" height="150%">
+ <feMorphology in="SourceAlpha" operator="dilate" radius="12" result="o0"/><feGaussianBlur in="o0" stdDeviation="6" result="ob"/><feComponentTransfer in="ob" result="o"><feFuncA type="discrete" tableValues="0 1 1 1"/></feComponentTransfer><feFlood flood-color="#FFF4DD"/><feComposite in2="o" operator="in" result="c"/>
+ <feMorphology in="o" operator="dilate" radius="2.5" result="o2"/><feFlood flood-color="#2B3BFF"/><feComposite in2="o2" operator="in" result="e"/>
+ <feMerge><feMergeNode in="e"/><feMergeNode in="c"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs><circle cx="250" cy="210" r="178" fill="#FFC53D"/><circle cx="250" cy="210" r="178" fill="none" stroke="#2B3BFF" stroke-width="10"/><g transform="translate(250 210) scale(.86) translate(-245 -235)"><g stroke="#2B3BFF" stroke-width="3.6" stroke-linejoin="round" stroke-linecap="round">
+ <!-- brazo saludo -->
+ <path d="M98 300 q-34-8 -40-40" fill="none" stroke-width="16"/><path d="M98 300 q-34-8 -40-40" fill="none" stroke="#FFF4DD" stroke-width="9"/>
+ <path d="M38 248 q-2-20 18-22 q20-2 22 16 q2 20 -18 22 q-18 2 -22-16z" fill="#FFF4DD"/><path d="M46 240 q8-4 16 0 M46 250 q8-4 18 0" fill="none" stroke-width="2.4"/>
+ <!-- cuerpo -->
+ <circle cx="150" cy="230" r="70" fill="none" stroke="#2B3BFF" stroke-width="7.2"/><circle cx="230" cy="190" r="88" fill="none" stroke="#2B3BFF" stroke-width="7.2"/><circle cx="310" cy="220" r="72" fill="none" stroke="#2B3BFF" stroke-width="7.2"/><circle cx="110" cy="290" r="56" fill="none" stroke="#2B3BFF" stroke-width="7.2"/><circle cx="360" cy="285" r="54" fill="none" stroke="#2B3BFF" stroke-width="7.2"/><circle cx="200" cy="300" r="80" fill="none" stroke="#2B3BFF" stroke-width="7.2"/><circle cx="280" cy="300" r="78" fill="none" stroke="#2B3BFF" stroke-width="7.2"/>
+ <circle cx="150" cy="230" r="70" fill="#fff" stroke="none"/><circle cx="230" cy="190" r="88" fill="#fff" stroke="none"/><circle cx="310" cy="220" r="72" fill="#fff" stroke="none"/><circle cx="110" cy="290" r="56" fill="#fff" stroke="none"/><circle cx="360" cy="285" r="54" fill="#fff" stroke="none"/><circle cx="200" cy="300" r="80" fill="#fff" stroke="none"/><circle cx="280" cy="300" r="78" fill="#fff" stroke="none"/>
+ <g clip-path="url(#cloudC)" stroke="none">
+  <path d="M60 320 q120 70 330 -30 l40 140 h-400z" fill="url(#dotL)" opacity=".55"/>
+  <path d="M330 170 q50 40 50 130 l40 0 v-160z" fill="url(#hatch)" opacity=".7"/>
+ </g>
+ <!-- pliegues interiores de la nube -->
+ <g fill="none" stroke-width="2.8">
+  <path d="M176 196 q14-26 42-30"/><path d="M262 150 q22 4 34 22"/><path d="M118 262 q8-14 24-18"/>
+  <path d="M166 318 q-10-16 -6-34"/><path d="M246 340 q-14-8 -18-24"/><path d="M322 330 q12-10 14-28"/><path d="M350 252 q10 6 16 18"/>
+ </g>
+ <g fill="#2B3BFF" stroke="none"><circle cx="142" cy="208" r="2.4"/><circle cx="150" cy="198" r="1.8"/><circle cx="334" cy="262" r="2.2"/><circle cx="196" cy="350" r="2"/></g>
+ <path d="M190 142 q16-14 38-14" fill="none" stroke="#fff" stroke-width="7"/><path d="M190 142 q16-14 38-14" fill="none" stroke-width="2"/>
+ <!-- gorra -->
+ <path d="M170 132 q14-62 80-62 q60 4 72 58 q-72-22 -152 4z" fill="#FF7A1F"/>
+ <path d="M170 132 q14-62 80-62 q60 4 72 58 q-72-22 -152 4z" fill="url(#dotO)" stroke="none" opacity=".55"/>
+ <path d="M250 70 q-14 22 -12 60 M250 70 q30 12 46 50 M250 70 q-34 10 -56 52" fill="none" stroke-width="2.6"/>
+ <path d="M170 132 q-44 -6 -58 18 q30 10 62 0z" fill="#2B3BFF"/><path d="M128 146 q20 4 40 -2" fill="none" stroke="#FFF4DD" stroke-width="2"/>
+ <circle cx="250" cy="70" r="7" fill="#FFC53D"/>
+ <path d="M206 116 l10-28 l10 28 M210 106 h12" fill="none" stroke="#fff" stroke-width="4.5"/>
+ <!-- lentes con < > -->
+ <path d="M140 216 l-24 -10 M332 216 l24 -10" fill="none"/>
+ <path d="M140 216 h192 l-8 42 q-6 20 -34 20 h-24 q-22 0 -28-20 l-4-12 q-4-5 -10 0 l-4 12 q-6 20 -28 20 h-24 q-28 0 -34-20z" fill="#2B3BFF"/>
+ <g clip-path="url(#lensC)" stroke="none"><path d="M140 216 h192 v14 h-192z" fill="#5B6BFF"/><path d="M150 246 l30 -30 h8 l-30 30z M270 246 l30 -30 h8 l-30 30z" fill="#9AA5FF"/></g>
+ <path d="M202 230 l-20 16 l20 16" fill="none" stroke="#FFF4DD" stroke-width="7"/>
+ <path d="M266 230 l20 16 l-20 16" fill="none" stroke="#FFF4DD" stroke-width="7"/>
+ <!-- cara -->
+ <path d="M206 300 q30 28 62 0 q-8 22 -31 22 q-23 0 -31-22z" fill="#fff"/>
+ <path d="M218 312 q18 6 38 0" fill="none" stroke-width="2.2"/>
+ <path d="M194 296 q-6 4 -4 10 M280 296 q6 4 4 10" fill="none" stroke-width="2.8"/>
+ <g fill="#FF7A1F" stroke="none"><circle cx="160" cy="296" r="2.6"/><circle cx="168" cy="302" r="2.6"/><circle cx="156" cy="304" r="2.6"/><circle cx="314" cy="296" r="2.6"/><circle cx="322" cy="302" r="2.6"/><circle cx="310" cy="304" r="2.6"/></g>
+ <!-- brazo cursor -->
+ <path d="M344 300 q24-6 34-40" fill="none" stroke-width="16"/><path d="M344 300 q24-6 34-40" fill="none" stroke="#FFF4DD" stroke-width="9"/>
+ <g transform="translate(372 120) rotate(14)">
+  <path d="M0 96 q-4-30 6-44 l0-46 q0-14 12-14 q12 0 12 14 v34 q4-12 14-10 q10 2 10 14 q4-10 14-8 q10 2 10 14 q6-8 14-4 q8 4 6 18 l-6 34 q-6 26 -30 30 h-30 q-22-4 -32-32z" fill="#fff"/>
+  <path d="M30 56 v16 M54 62 v12 M78 66 v10" fill="none" stroke-width="2.4"/>
+  <path d="M6 20 q6-4 12 0" fill="none" stroke-width="2.2"/>
+  <path d="M4 112 q10 14 28 16 h30" fill="none" stroke="#FF7A1F" stroke-width="5"/>
+ </g>
+</g></g></svg>

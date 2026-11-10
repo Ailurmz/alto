@@ -114,7 +114,7 @@ window.ALTO = {
     precios: [ { tipo: "Landing", precio: "260", antes: "300" }, { tipo: "Web", precio: "320", antes: "370" }, { tipo: "Empresa", precio: "400", antes: "470" } ]
   },
   /* ---------- LANZAMIENTO (borrá o cambiá cuando se completen los lugares) ---------- */
-  lanzamiento: { activo: true, lugares: 5, texto: "Los primeros 5 clientes tienen precio especial y sus 6 primeras publicaciones de regalo." },
+  lanzamiento: { activo: true },  // regalo para todos los clientes: Kit Despegue (false para ocultarlo)
 
   /* ---------- PAQUETES ---------- */
   paquetes: [

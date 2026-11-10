@@ -20,6 +20,37 @@
     // plantilla sugerida para "otro rubro", según lo que necesita
     porDefecto: { landing: 'auriculares', web: 'fotografia', empresa: 'logistica' },
     nombres: { burger: 'Brasa', estetica: 'Lumière', psicologia: 'Sofía Marín', estudio: 'Ferrer', gimnasio: 'Norte Fit', constructora: 'Cimientos', fotografia: 'Tomás Rey', auriculares: 'Aura', logistica: 'Vía', inmobiliaria: 'Hábitat' },
+
+    // Frases con contexto: se revisan ANTES que las palabras clave, en este orden.
+    // [expresión a buscar (sin tildes, en minúscula), respuesta]
+    especiales: [
+      // identidad de marca
+      ['(no tengo|todavia no tengo|no tenemos|sin|me falta|necesito|quiero|hacen|arman|disenan|crean)( un| el| mi| una| la)? (logo|marca|identidad|branding)', 'La armamos con vos: logo, colores y tipografías, con hasta 3 propuestas. Y si querés todo junto, el pack Despegue completo suma identidad de marca, tu web y tus primeras 6 publicaciones para Instagram, con la misma estética.'],
+      ['(ya )?(tengo|tenemos|cuento con)( mi| un| el| la| una)? (logo|marca|identidad|branding|manual de marca|colores)', '¡Genial! Si ya tenés tu identidad de marca, la aplicamos en tu web: usamos tu logo, tus colores y tus tipografías para que todo quede coherente. No tenés que pagar identidad aparte. Solo mandanos el logo (ideal en PNG o SVG), los colores y, si lo tenés, tu manual de marca.'],
+      // dominio y hosting
+      ['(no tengo|sin|me falta|necesito|no se que es)( un| el| mi)? (dominio|hosting|servidor)', 'Te ayudamos: el dominio es tu dirección web (tunegocio.com) y el hosting es donde vive la web. Los contratamos y configuramos a tu nombre, y vos los pagás directo al proveedor, unos 5 a 10 USD por mes.'],
+      ['(ya )?(tengo|tenemos)( un| el| mi)? (dominio|hosting|servidor|wordpress)', '¡Perfecto! Usamos tu dominio y tu hosting, que siguen siendo tuyos. Solo necesitamos que tengan WordPress (o lo instalamos nosotros) y un acceso para publicar tu web.'],
+      // ya tiene web
+      ['(ya )?(tengo|tenemos)( una| mi)? (web|pagina|sitio)|mi (web|pagina|sitio) (actual|vieja)|renovar|redisen|cambiar mi (web|pagina)|mejorar mi (web|pagina)', 'Podemos renovarla: la pasamos a una Plantilla ALTO adaptada a tu marca (Web 72 h) o la rediseñamos a medida. Si tu dominio ya es tuyo, lo mantenemos, así no perdés tu dirección.'],
+      // material
+      ['(no tengo|sin|me faltan|no se que poner en los) (textos|fotos|imagenes|contenido)', 'No hay problema: si te faltan textos, los armamos con vos a partir de una charla corta. Y si te faltan fotos, usamos imágenes profesionales libres de derechos hasta que tengas las tuyas.'],
+      ['(tengo que|necesito|hay que|debo) (mandar|pasar|enviar)|que (les|te) (mando|paso)|que necesitan de mi|para empezar que', 'Para arrancar necesitamos: tu logo (PNG o SVG), tus colores, entre 5 y 10 fotos y los textos (o te ayudamos a armarlos). Las 72 h cuentan desde que tenemos la seña y todo el material.'],
+      // qué incluye / cambios
+      ['que incluye|que trae|que viene', 'La Web 72 h incluye: plantilla adaptada a tu marca, botón de WhatsApp y formulario, Píxel de Meta y Google Analytics, SEO base, versión para celular, 1 ronda de ajustes, 15 días de soporte y el primer mes de mantenimiento de regalo.'],
+      ['(no me gusta|si no me gusta|cambios|correcciones|ajustes|rondas|garantia)', 'Antes de pagar el 50 % final ves tu web terminada. La Web 72 h incluye 1 ronda de ajustes y las webs a medida, 2 rondas. Si la primera propuesta a medida no te convence, la rehacemos.'],
+      // pagos
+      ['factura|comprobante', 'Te enviamos comprobante de cada pago. Si necesitás factura, escribinos por WhatsApp y lo vemos según tu caso.'],
+      ['(en )?pesos|tipo de cambio|cotizacion del dolar', 'Sí, podés pagar en pesos, tomando el valor del dólar del día del pago. Con Mercado Pago también podés pagar en cuotas con tarjeta.'],
+      // plataformas
+      ['wix|shopify|tiendanube|tienda nube|squarespace|webflow|elementor', 'Trabajamos con WordPress, que es tuyo, flexible y sin pagos mensuales de plataforma. Si vendés por Tiendanube o Shopify, tu web de ALTO puede llevar a tu tienda con botones y catálogo.'],
+      ['(turno|turnos|reserva|reservas|agenda|calendly)', 'Sí: sumamos un botón de "Reservar" que lleva a tu agenda online (Google Calendar o Calendly, gratis) o a tu WhatsApp. Así tus clientes reservan sin llamarte.'],
+      ['ingles|idioma|portugues|bilingue', 'Podemos sumar tu web en otro idioma. Se cotiza aparte según la cantidad de secciones: escribinos por WhatsApp.'],
+      // ALTO
+      ['(trabajos|ejemplos|portfolio|clientes|webs que hicieron|hicieron)', 'Mirá "Marcas que ya subieron" para ver webs reales que hicimos, y en Plantillas ALTO podés abrir cada demo y recorrerla como si fuera tuya.'],
+      ['(donde estan|de donde son|ubicacion|zona|presencial|oficina|atienden en)', 'Somos de Buenos Aires y trabajamos 100 % online con todo Argentina y Latinoamérica. Todo se coordina por WhatsApp y videollamada.'],
+      ['(persona|humano|alguien|hablar con|llamar|telefono|numero|email|mail|contacto)', 'Te atendemos personas reales 🙂 Escribinos por WhatsApp y te respondemos en el día.'],
+      ['^(gracias|muchas gracias|genial|perfecto|ok|dale|buenisimo)', '¡De nada! Cuando quieras seguimos. Si ya sabés lo que querés, escribinos por WhatsApp y arrancamos.']
+    ],
     // Preguntas frecuentes: [pregunta, respuesta, palabras clave que la activan cuando escriben]
     dudas: [
       ['¿Cuánto cuesta?', 'La Web 72 h (adaptamos una plantilla a tu marca y te la entregamos terminada, online en 72 horas) arranca en 120 USD. Si preferís armarla vos, las plantillas para descargar salen 60 USD (Esenciales) u 80 USD (Pro). Las webs a medida se cotizan según tu proyecto.', ['precio', 'cuesta', 'costo', 'valor', 'cuanto sale', 'cuanto es', 'presupuesto', 'cotiz', 'usd', 'dolar', 'barato', 'tarifa']],
@@ -50,17 +81,17 @@
   // ---------- estilos (todo acá, para que funcione en cualquier web) ----------
   var css = document.createElement('style');
   css.textContent = [
-    '#alto-asis{--a:#2B3BFF;--c:#121216;--h:#F2EEE6;--g:#FFC53D;--b:#FF5A1F;position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:95;font-family:var(--body,system-ui,sans-serif);color:var(--c)}',
+    '#alto-asis{--a:#2B3BFF;--c:#121216;--h:#F2EEE6;--g:#FFC53D;--b:#FF5A1F;position:fixed;right:16px;bottom:calc(var(--aa-b,112px) + env(safe-area-inset-bottom,0px));z-index:95;font-family:var(--body,system-ui,sans-serif);color:var(--c)}',
     '#alto-asis *{box-sizing:border-box}',
     '.aa-fab{width:62px;height:62px;border-radius:50%;border:0;background:var(--c);color:var(--h);cursor:pointer;display:grid;place-items:center;box-shadow:0 14px 34px -10px rgba(18,18,22,.55);transition:transform .4s cubic-bezier(.22,1,.36,1)}',
     '.aa-fab:hover{transform:translateY(-4px) rotate(-6deg)}',
     '.aa-fab svg{width:28px;height:28px}',
     '.aa-fab::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--a);animation:aa-ring 2.4s infinite;pointer-events:none}',
     '@keyframes aa-ring{0%{opacity:.8;transform:scale(.9)}100%{opacity:0;transform:scale(1.35)}}',
-    '.aa-tip{position:absolute;left:72px;bottom:12px;white-space:nowrap;background:var(--h);color:var(--c);border:1.5px solid var(--c);border-radius:14px 14px 14px 4px;padding:9px 30px 9px 13px;font-size:14px;font-weight:600;box-shadow:0 10px 30px -12px rgba(0,0,0,.4);opacity:0;transform:translateX(-8px);transition:opacity .4s,transform .4s;pointer-events:none}',
+    '.aa-tip{position:absolute;right:72px;bottom:12px;white-space:nowrap;background:var(--h);color:var(--c);border:1.5px solid var(--c);border-radius:14px 14px 4px 14px;padding:9px 30px 9px 13px;font-size:14px;font-weight:600;box-shadow:0 10px 30px -12px rgba(0,0,0,.4);opacity:0;transform:translateX(-8px);transition:opacity .4s,transform .4s;pointer-events:none}',
     '.aa-tip.is-on{opacity:1;transform:none;pointer-events:auto}',
     '.aa-tip button{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;font-size:16px;cursor:pointer;color:inherit;padding:2px 6px}',
-    '.aa-panel{position:absolute;left:0;bottom:76px;width:min(370px,calc(100vw - 32px));height:min(560px,calc(100svh - 120px));display:flex;flex-direction:column;background:var(--h);border:1.5px solid var(--c);border-radius:22px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(18,18,22,.55);transform-origin:bottom left;transform:scale(.85) translateY(10px);opacity:0;visibility:hidden;transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .3s,visibility 0s .45s}',
+    '.aa-panel{position:absolute;right:0;bottom:76px;width:min(370px,calc(100vw - 32px));height:min(560px,calc(100svh - 120px));display:flex;flex-direction:column;background:var(--h);border:1.5px solid var(--c);border-radius:22px;overflow:hidden;box-shadow:0 30px 70px -20px rgba(18,18,22,.55);transform-origin:bottom right;transform:scale(.85) translateY(10px);opacity:0;visibility:hidden;transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .3s,visibility 0s .45s}',
     '#alto-asis.is-open .aa-panel{transform:none;opacity:1;visibility:visible;transition:transform .45s cubic-bezier(.22,1,.36,1),opacity .3s}',
     '.aa-head{display:flex;align-items:center;gap:10px;padding:14px 16px;background:var(--c);color:var(--h)}',
     '.aa-head b{font-family:var(--display,Impact,sans-serif);font-weight:400;font-size:22px;letter-spacing:.02em;line-height:1;text-transform:uppercase}',
@@ -88,13 +119,17 @@
     '.aa-opt{border:1.5px solid var(--c);background:transparent;color:var(--c);border-radius:999px;padding:9px 14px;font-weight:600;font-size:13.5px;line-height:1.2;font-family:inherit;cursor:pointer;text-align:left;transition:background-color .25s,color .25s;animation:aa-in .35s cubic-bezier(.22,1,.36,1) both}',
     '.aa-opt:hover{background:var(--c);color:var(--h)}',
     '.aa-opt.is-main{background:var(--a);border-color:var(--a);color:#fff}',
+    '.aa-opt small{display:block;font-weight:400;font-size:12px;opacity:.75;margin-top:3px}',
+    '.aa-opt:hover small{opacity:.9}',
+    '.aa-nav{display:flex;gap:6px;width:100%;margin-top:2px}',
+    '.aa-opt.is-nav{border-style:dashed;font-size:12.5px;padding:7px 12px;opacity:.85}',
     '.aa-opt.is-wa{background:#25D366;border-color:#25D366;color:#fff}',
     '.aa-card{align-self:stretch;background:var(--c);color:var(--h);border-radius:16px;padding:16px;display:grid;gap:8px;font-size:14px;animation:aa-in .35s cubic-bezier(.22,1,.36,1)}',
     '.aa-card .aa-k{font-family:var(--mono,monospace);font-size:11px;color:var(--g)}',
     '.aa-card b{font-family:var(--display,Impact,sans-serif);font-weight:400;font-size:28px;line-height:1;text-transform:uppercase}',
     '.aa-card p{opacity:.85;margin:0}',
     '.aa-card a{color:var(--g)}',
-    '@media (max-width:520px){#alto-asis{left:12px}.aa-panel{position:fixed;left:8px;right:8px;bottom:84px;width:auto;height:min(78svh,620px)}.aa-tip{display:none}}',
+    '@media (max-width:520px){#alto-asis{right:12px}.aa-panel{position:fixed;left:8px;right:8px;bottom:calc(var(--aa-b,112px) + 74px);width:auto;height:min(78svh,620px)}.aa-tip{display:none}}',
     '@media (prefers-reduced-motion:reduce){#alto-asis *{animation:none!important;transition:none!important}}'
   ].join('');
   document.head.appendChild(css);
@@ -109,6 +144,13 @@
     '<button class="aa-fab" type="button" aria-label="Abrir el asistente de ALTO" aria-expanded="false">' +
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l4 5H8z" fill="currentColor"/><path d="M12 21l-4-5h8z" fill="currentColor" opacity=".45"/><path d="M4 12h16"/></svg></button>';
   document.body.appendChild(root);
+  // la rueda del mouse y el dedo dentro del chat mueven solo el chat
+  var panel = root.querySelector('.aa-panel');
+  panel.setAttribute('data-lenis-prevent', '');
+  ['wheel', 'touchmove'].forEach(function (ev) { panel.addEventListener(ev, function (e) { e.stopPropagation(); }, { passive: true }); });
+  // se ubica justo arriba del indicador de piso (abajo a la derecha)
+  function place() { var el = document.querySelector('.elevator, .alto-elevator'), h = el ? el.offsetHeight : 0; root.style.setProperty('--aa-b', (h ? h + 28 : 16) + 'px'); }
+  place(); addEventListener('resize', place); addEventListener('scroll', place, { passive: true }); [500, 1500, 4000].forEach(function (t) { setTimeout(place, t); });
   var $ = function (s) { return root.querySelector(s); };
   var log = $('.aa-log'), opts = $('.aa-opts'), fab = $('.aa-fab'), tip = $('.aa-tip'), floor = $('.aa-floor');
   tip.querySelector('span').textContent = CONFIG.aviso;
@@ -120,10 +162,16 @@
     setTimeout(function () { t.className = 'aa-msg aa-bot'; t.innerHTML = html; scroll(); if (cb) cb(); }, delay || 650);
   }
   function me(text) { var m = document.createElement('div'); m.className = 'aa-msg aa-me'; m.textContent = text; log.appendChild(m); scroll(); }
+  var hist = [];
+  function step(fn) { hist.push(fn); fn(); }
+  function back() { hist.pop(); var prev = hist.pop(); step(prev || menu); }
+  function home() { hist = []; st = {}; step(menu); }
   function ask(list) {
     opts.innerHTML = '';
+    if (hist.length > 1) list = list.concat([{ t: '← Volver', cls: 'is-nav', go: back }, { t: 'Menú principal', cls: 'is-nav', go: home }]);
     list.forEach(function (o, i) {
-      var b = document.createElement(o.href ? 'a' : 'button'); b.className = 'aa-opt' + (o.cls ? ' ' + o.cls : ''); b.textContent = o.t; b.style.animationDelay = (i * 60) + 'ms';
+      var b = document.createElement(o.href ? 'a' : 'button'); b.className = 'aa-opt' + (o.cls ? ' ' + o.cls : ''); b.style.animationDelay = (i * 60) + 'ms';
+      if (o.sub) { b.innerHTML = esc(o.t) + '<small>' + esc(o.sub) + '</small>'; } else b.textContent = o.t;
       if (o.href) { b.href = o.href; b.target = '_blank'; b.rel = 'noopener'; b.addEventListener('click', function () { if (o.lead) track('generate_lead'); }); }
       else { b.type = 'button'; b.addEventListener('click', function () { opts.innerHTML = ''; if (!o.silent) me(o.t); o.go(); }); }
       opts.appendChild(b);
@@ -133,62 +181,73 @@
   var wa = function (m) { return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(m); };
 
   // ---------- conversación ----------
-  var NEED = [
-    { t: 'Una web para mi negocio', go: function () { st.tipo = 'web'; paso2(); } },
-    { t: 'Vender un producto o una promo', go: function () { st.tipo = 'landing'; paso2(); } },
-    { t: 'Una web para mi empresa', go: function () { st.tipo = 'empresa'; paso2(); } }
-  ];
+  var dCual = CONFIG.dudas.filter(function (d) { return /^¿Landing/.test(d[0]); })[0];
+  var dDif = CONFIG.dudas.filter(function (d) { return /editarla yo/.test(d[0]); })[0];
+  var dHost = CONFIG.dudas.filter(function (d) { return /dominio y el hosting/.test(d[0]); })[0];
   function inicio() {
-    st = {}; floor.textContent = 'PB';
-    say(esc(CONFIG.saludo), function () {
-      say('¿Qué necesitás? También podés escribirme tu pregunta abajo.', function () {
-        ask(NEED.concat([{ t: 'Tengo una duda', go: dudas }]));
-      }, 450);
-    });
+    hist = []; st = {};
+    say(esc(CONFIG.saludo), function () { step(menu); }, 450);
   }
-  function paso2() {
-    floor.textContent = '01';
-    say('¡Buenísimo! ¿Cómo la querés? <span class="aa-note">Todas se pueden editar después desde WordPress: la diferencia es quién la arma.</span>', function () {
+  // 1 · qué tipo de web
+  function menu() {
+    floor.textContent = 'PB';
+    say('¿Qué estás buscando? <span class="aa-note">Elegí una opción o escribime tu pregunta abajo.</span>', function () {
       ask([
-        { t: 'Una plantilla para editar yo (la más económica)', go: function () { st.modo = 'dl'; paso3(); } },
-        { t: 'Mi web lista, con mis textos finales (72 h)', go: function () { st.modo = 'w72'; paso3(); } },
-        { t: 'Algo 100 % a medida', go: function () { st.modo = 'medida'; paso3(); } },
-        { t: '¿Cuál es la diferencia?', go: function () { responder(CONFIG.dudas[3], function () { paso2(); }); } }
+        { t: 'Landing', sub: 'Una sola página para vender, promocionar o tomar turnos', go: function () { st.tipo = 'landing'; step(modo); } },
+        { t: 'Web', sub: 'Tu negocio completo: servicios, trabajos y contacto', go: function () { st.tipo = 'web'; step(modo); } },
+        { t: 'Web empresarial', sub: 'Para pymes y empresas: áreas, proyectos y clientes', go: function () { st.tipo = 'empresa'; step(modo); } },
+        { t: 'No sé cuál necesito', go: function () { say(esc(dCual[1]), function () { hist.pop(); step(menu); }, 900); } },
+        { t: 'Tengo una duda', go: function () { step(dudas); } }
       ]);
     });
   }
-  function paso3() {
-    floor.textContent = '02';
-    say('¿De qué rubro es tu negocio?', function () {
-      ask(CONFIG.rubros.map(function (r) { return { t: r[0], go: function () { st.rubro = r[0]; st.demo = r[1] || CONFIG.porDefecto[st.tipo]; paso4(); } }; }));
+  // 2 · quién la arma
+  function modo() {
+    floor.textContent = '01';
+    say('¿Cómo la querés? <span class="aa-note">Todas se pueden editar después. La diferencia es quién la arma.</span>', function () {
+      ask([
+        { t: 'Te la armamos (online en 72 h)', sub: 'ALTO adapta una plantilla a tu marca, con tus textos y fotos. Online en 72 h', go: function () { st.modo = 'w72'; step(rubro); } },
+        { t: 'La armo yo (plantilla para descargar)', sub: 'Descargás la plantilla y cargás vos tus textos y fotos. La más económica', go: function () { st.modo = 'dl'; step(rubro); } },
+        { t: 'Diseño único, a medida', sub: 'Diseñada desde cero, solo para tu marca', go: function () { st.modo = 'medida'; step(rubro); } },
+        { t: '¿Cuál me conviene?', go: function () { say(esc(dDif[1]), function () { hist.pop(); step(modo); }, 900); } }
+      ]);
     });
   }
-  function paso4() {
+  // 3 · rubro
+  function rubro() {
+    floor.textContent = '02';
+    say('¿De qué rubro es tu negocio?', function () {
+      ask(CONFIG.rubros.map(function (r) { return { t: r[0], go: function () { st.rubro = r[0]; st.demo = r[1] || CONFIG.porDefecto[st.tipo]; step(extra); } }; }));
+    });
+  }
+  // 4 · hosting (si la arma) o logo (si se la armamos)
+  function extra() {
     floor.textContent = '03';
     if (st.modo === 'dl') {
-      say('¿Ya tenés dominio y hosting con WordPress?', function () {
+      say('Para publicarla necesitás dominio y hosting con WordPress. ¿Ya los tenés?', function () {
         ask([
-          { t: 'Sí, ya tengo', go: function () { st.hosting = 'tengo'; paso5(); } },
-          { t: 'No, necesito ayuda con eso', go: function () { st.hosting = 'ayuda'; paso5(); } },
-          { t: 'No sé qué es', go: function () { st.hosting = 'nose'; responder(CONFIG.dudas[5], paso5); } }
+          { t: 'Sí, ya tengo', go: function () { st.hosting = 'tengo'; step(cuando); } },
+          { t: 'No, necesito ayuda con eso', go: function () { st.hosting = 'ayuda'; step(cuando); } },
+          { t: '¿Qué es eso?', go: function () { say(esc(dHost[1]), function () { hist.pop(); step(extra); }, 900); } }
         ]);
       });
     } else {
-      say('¿Ya tenés logo e identidad de marca?', function () {
+      say('¿Ya tenés logo e identidad de marca (colores, tipografías)?', function () {
         ask([
-          { t: 'Sí, tengo logo y colores', go: function () { st.marca = true; paso5(); } },
-          { t: 'No, todavía no', go: function () { st.marca = false; paso5(); } }
+          { t: 'Sí, ya tengo', go: function () { st.marca = true; step(cuando); } },
+          { t: 'No, todavía no', sub: 'Te la armamos junto con tu web', go: function () { st.marca = false; step(cuando); } }
         ]);
       });
     }
   }
-  function paso5() {
+  // 5 · cuándo
+  function cuando() {
     floor.textContent = '04';
     say('Última: ¿para cuándo la necesitás?', function () {
       ask([
-        { t: 'Lo antes posible', go: function () { st.cuando = 'lo antes posible'; final(); } },
-        { t: 'Este mes', go: function () { st.cuando = 'este mes'; final(); } },
-        { t: 'Sin apuro, estoy averiguando', go: function () { st.cuando = 'sin apuro'; final(); } }
+        { t: 'Lo antes posible', go: function () { st.cuando = 'lo antes posible'; step(final); } },
+        { t: 'Este mes', go: function () { st.cuando = 'este mes'; step(final); } },
+        { t: 'Sin apuro, estoy averiguando', go: function () { st.cuando = 'sin apuro'; step(final); } }
       ]);
     });
   }
@@ -197,14 +256,14 @@
     var tipo = TIPO[st.tipo], titulo, txt, msg;
     var nombreDemo = CONFIG.nombres[st.demo] || st.demo, demoUrl = DEMOS + 'demo-' + st.demo + '.html';
     if (st.modo === 'w72' && st.marca) {
-      titulo = tipo + ' 72 h'; txt = 'Adaptamos la plantilla a tu marca y te la entregamos terminada, con tus textos finales, online en 72 horas. Desde ' + CONFIG.precios.w72 + ' USD, 50 % al empezar y 50 % al final.';
+      titulo = tipo + ' 72 h'; txt = 'Adaptamos la plantilla a tu marca y te la entregamos terminada, con tus textos y fotos, online en 72 horas. Desde ' + CONFIG.precios.w72 + ' USD: 50 % al empezar y 50 % al final.';
       msg = 'Hola ALTO, quiero una ' + titulo + ' para mi negocio (' + st.rubro + '). Ya tengo logo e identidad. Me gustó la plantilla ' + nombreDemo + '.';
     } else if (st.modo === 'w72') {
-      titulo = 'Despegue completo'; txt = 'Armamos tu identidad de marca, tu ' + tipo.toLowerCase() + ' terminada con tus textos finales y tus primeras 6 publicaciones para Instagram, todo con la misma estética y a un precio especial.';
+      titulo = 'Despegue completo'; txt = 'Armamos tu identidad de marca, tu ' + tipo.toLowerCase() + ' terminada con tus textos y tus primeras 6 publicaciones para Instagram, todo con la misma estética y a un precio especial.';
       msg = 'Hola ALTO, quiero el pack Despegue completo: identidad de marca + ' + tipo.toLowerCase() + ' + 6 publicaciones. Mi rubro: ' + st.rubro + '. Me gustó la plantilla ' + nombreDemo + '.';
     } else if (st.modo === 'dl') {
-      titulo = 'Plantilla para editar vos'; txt = 'La descargás y cargás vos tus textos, fotos y colores en WordPress, con guía en PDF. Esenciales ' + CONFIG.precios.esencial + ' USD, Pro ' + CONFIG.precios.pro + ' USD.' + (st.hosting === 'tengo' ? '' : ' Te ayudamos a contratar tu dominio y hosting.');
-      msg = 'Hola ALTO, quiero una plantilla para editar yo (' + tipo + ') para mi negocio (' + st.rubro + '). Me gustó ' + nombreDemo + '.' + (st.hosting === 'tengo' ? ' Ya tengo dominio y hosting.' : ' Necesito ayuda con el dominio y el hosting.');
+      titulo = 'Plantilla para descargar'; txt = 'La descargás y cargás vos tus textos, fotos y colores en WordPress, con guía en PDF. Esenciales ' + CONFIG.precios.esencial + ' USD, Pro ' + CONFIG.precios.pro + ' USD.' + (st.hosting === 'tengo' ? '' : ' Te ayudamos a contratar tu dominio y hosting.');
+      msg = 'Hola ALTO, quiero descargar una plantilla (' + tipo + ') para mi negocio (' + st.rubro + '). Me gustó ' + nombreDemo + '.' + (st.hosting === 'tengo' ? ' Ya tengo dominio y hosting.' : ' Necesito ayuda con el dominio y el hosting.');
     } else {
       titulo = tipo + ' a medida'; txt = 'Diseñada desde cero, solo para tu marca.' + (st.marca ? '' : ' Y sumamos tu identidad de marca.') + ' Contanos tu proyecto y te mandamos una propuesta en 24 horas.';
       msg = 'Hola ALTO, quiero una ' + titulo.toLowerCase() + ' para mi negocio (' + st.rubro + ').' + (st.marca ? ' Ya tengo logo e identidad.' : ' No tengo logo todavía.');
@@ -218,27 +277,24 @@
         ask([
           { t: 'Seguir por WhatsApp →', cls: 'is-wa', href: wa(msg), lead: true },
           { t: 'Ver la plantilla ' + nombreDemo, cls: 'is-main', href: demoUrl },
-          { t: 'Tengo una duda', go: dudas },
-          { t: 'Empezar de nuevo', silent: true, go: function () { log.innerHTML = ''; inicio(); } }
+          { t: 'Tengo una duda', go: function () { step(dudas); } }
         ]);
       });
     });
   }
-  // respuesta + qué hacer después
-  function responder(d, luego) {
+  // respuesta a una duda + qué hacer después
+  function responder(d) {
     say(esc(d[1]), function () {
-      if (luego) { luego(); return; }
       ask([
-        { t: 'Otra duda', go: dudas },
-        { t: 'Quiero elegir mi web', go: function () { say('¡Vamos! ¿Qué necesitás?', function () { ask(NEED); }); } },
-        { t: 'Preguntar por WhatsApp →', cls: 'is-wa', href: wa('Hola ALTO, tengo una duda: '), lead: true }
+        { t: 'Preguntar otra cosa por WhatsApp →', cls: 'is-wa', href: wa('Hola ALTO, tengo una duda: '), lead: true },
+        { t: 'Quiero elegir mi web', go: home }
       ]);
     }, 900);
   }
   function dudas() {
     floor.textContent = '07';
     say('Elegí tu duda o escribila abajo:', function () {
-      var list = CONFIG.dudas.slice(0, 8).map(function (d) { return { t: d[0], go: function () { responder(d); } }; });
+      var list = CONFIG.dudas.slice(0, 9).map(function (d) { return { t: d[0], go: function () { step(function () { responder(d); }); } }; });
       if (document.getElementById('dudas')) list.push({ t: 'Ver todas las preguntas frecuentes', cls: 'is-main', silent: true, go: function () {
         close(); var nav = document.querySelector('a[href="#dudas"]'); if (nav) nav.click(); else document.getElementById('dudas').scrollIntoView({ behavior: 'smooth' });
       } });
@@ -249,7 +305,12 @@
   // ---------- preguntas escritas: busca palabras clave ----------
   var norm = function (t) { return t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[¿?¡!.,;:]/g, ' '); };
   function buscar(q) {
-    var n = ' ' + norm(q) + ' ', best = null, score = 0;
+    var t = norm(q).replace(/\s+/g, ' ').trim();
+    for (var i = 0; i < (CONFIG.especiales || []).length; i++) {
+      var e = CONFIG.especiales[i];
+      if (new RegExp(e[0]).test(t)) return [q, e[1]];
+    }
+    var n = ' ' + t + ' ', best = null, score = 1;
     CONFIG.dudas.forEach(function (d) {
       var sc = 0; (d[2] || []).forEach(function (k) { if (n.indexOf(norm(k)) > -1) sc += norm(k).length > 4 ? 2 : 1; });
       if (sc > score) { score = sc; best = d; }
@@ -261,15 +322,15 @@
     var inp = this.querySelector('input'), q = inp.value.trim(); if (!q) return;
     inp.value = ''; opts.innerHTML = ''; me(q); track('asistente_pregunta');
     if (/^(hola|buenas|buen dia|buenas tardes|buenas noches)\b/.test(norm(q).trim()) && q.length < 25) {
-      say('¡Hola! ¿En qué te ayudo? Podés elegir una opción o escribirme tu pregunta.', function () { ask(NEED.concat([{ t: 'Tengo una duda', go: dudas }])); }); return;
+      say('¡Hola! ¿En qué te ayudo?', function () { home(); }); return;
     }
     var d = buscar(q);
-    if (d) { responder(d); return; }
+    if (d) { step(function () { responder(d); }); return; }
     say('Mmm, esa no la tengo. Mandala por WhatsApp y te respondemos en el día: el mensaje ya va armado.', function () {
       ask([
         { t: 'Preguntar por WhatsApp →', cls: 'is-wa', href: wa('Hola ALTO, tengo una pregunta: ' + q), lead: true },
-        { t: 'Ver preguntas frecuentes', go: dudas },
-        { t: 'Quiero elegir mi web', go: function () { say('¡Vamos! ¿Qué necesitás?', function () { ask(NEED); }); } }
+        { t: 'Ver preguntas frecuentes', go: function () { step(dudas); } },
+        { t: 'Quiero elegir mi web', go: home }
       ]);
     });
   });

@@ -17,28 +17,26 @@
     var btns = soon
       ? '<a class="btn btn--ghost btn--sm magnet" href="' + esc(wa('Hola ALTO, avisame cuando esté lista la plantilla ' + d.nombre + ' (' + d.rubro + ').')) + '" target="_blank" rel="noopener" data-hover="Te avisamos"><span>Avisame cuando esté</span></a>'
       : '<a class="btn btn--ghost btn--sm magnet" href="' + esc(link) + '" target="_blank" rel="noopener" data-hover="Mirala"><span>Ver demo</span></a>' +
-        '<a class="btn btn--blue btn--sm magnet" href="' + esc(wa('Hola ALTO, me gustó la plantilla ' + d.nombre + '. Quiero que la adapten a mi marca (Web 72 h).')) + '" target="_blank" rel="noopener" data-hover="¡Vamos!"><span>Hacela mía</span></a>';
-    var dl = (!soon && n.precio) ? '<a class="dcard__dl" href="' + esc(d.descarga || wa('Hola ALTO, quiero descargar la plantilla ' + d.nombre + ' (' + n.precio + ' USD).')) + '" target="_blank" rel="noopener">⤓ Descargala y editala vos · <b>' + esc(n.precio) + ' USD</b></a>' : '';
+        '<a class="btn btn--blue btn--sm magnet is-pick" href="#elegir" data-hover="¡Esta!"><span>Elegir esta</span></a>';
+    var dl = false ? '<a class="dcard__dl" href="' + esc(d.descarga || wa('Hola ALTO, quiero descargar la plantilla ' + d.nombre + ' (' + n.precio + ' USD).')) + '" target="_blank" rel="noopener">⤓ Descargala y editala vos · <b>' + esc(n.precio) + ' USD</b></a>' : '';
     el.innerHTML = shot + '<div class="dcard__body"><span class="mono dcard__rubro">' + (pro ? '★ Pro' : 'Esencial') + ' · ' + esc(TIPO[d.tipo] || '') + ' · ' + esc(d.rubro) + '</span><h3>' + esc(d.nombre) + '</h3>' +
       (pro && d.bajada ? '<p class="dcard__txt">' + esc(d.bajada) + '</p>' : '') + '<div class="dcard__btns">' + btns + '</div>' + dl + '</div>';
     return el;
   }
   var gPro = document.getElementById('catPro'), gEsen = document.getElementById('catEsen'), more = document.getElementById('catMore');
-  if (gPro) (DATA.destacadas || []).forEach(function (d) { gPro.appendChild(card(d, 'pro')); });
-  if (gEsen) {
-    var VIS = 3;
-    demos.forEach(function (d, i) { var c = card(d, 'esencial'); if (i >= VIS) { c.hidden = true; c.classList.add('is-more'); } gEsen.appendChild(c); });
-    if (more) {
-      var rest = demos.length - VIS;
-      if (rest <= 0) more.hidden = true;
-      more.innerHTML = '<span>Ver más plantillas esenciales (' + rest + ')</span>';
-      more.addEventListener('click', function () {
-        var open = more.classList.toggle('is-open');
-        [].forEach.call(gEsen.querySelectorAll('.is-more'), function (c) { c.hidden = !open; });
-        more.innerHTML = open ? '<span>Ver menos</span>' : '<span>Ver más plantillas esenciales (' + rest + ')</span>';
-        if (window.ScrollTrigger) setTimeout(function () { window.ScrollTrigger.refresh(); }, 50);
-      });
-    }
+  var VIS = 3, extra = 0;
+  if (gPro) (DATA.destacadas || []).forEach(function (d, i) { var c = card(d, 'pro'); if (i >= VIS) { c.hidden = true; c.classList.add('is-more'); extra++; } gPro.appendChild(c); });
+  if (gEsen) demos.forEach(function (d, i) { var c = card(d, 'esencial'); if (i >= VIS) { c.hidden = true; c.classList.add('is-more'); extra++; } gEsen.appendChild(c); });
+  if (more) {
+    if (!extra) more.hidden = true;
+    var lab = function (o) { more.innerHTML = o ? '<span>Ver menos</span>' : '<span>Ver todas las plantillas (+' + extra + ')</span>'; };
+    lab(false);
+    more.addEventListener('click', function () {
+      var o = more.classList.toggle('is-open');
+      [].forEach.call(document.querySelectorAll('#catPro .is-more, #catEsen .is-more'), function (x) { x.hidden = !o; });
+      lab(o); if (!o) document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' });
+      if (window.ScrollTrigger) setTimeout(function () { window.ScrollTrigger.refresh(); }, 50);
+    });
   }
   if (!gPro && !gEsen) return;
 
@@ -66,8 +64,7 @@
   }
   if ($('launch') && L.activo) {
     $('launch').hidden = false;
-    $('launch').innerHTML = '<span class="launch__dot" aria-hidden="true"></span><p><b>Lanzamiento ALTO.</b> ' + esc(L.texto) + '</p>' +
-      '<a class="btn btn--sm btn--dark magnet" href="' + esc(wa('Hola ALTO, quiero uno de los ' + L.lugares + ' lugares de lanzamiento.')) + '" target="_blank" rel="noopener" data-hover="¡Quiero!"><span>Quiero mi lugar</span></a>';
+    $('launch').innerHTML = '<img class="gift__img" src="kit-despegue.webp" alt="Kit Despegue: planner, organizador y stickers de regalo" width="600" height="400" loading="lazy"><div class="gift__txt"><span class="mono">🎁 Regalo ALTO</span><h3>Con tu web, te llevás el Kit Despegue.</h3><p>Planner de contenido mensual, organizador semanal con checklist de lanzamiento y stickers para imprimir y usar en tus pedidos. Lo descargás apenas publicamos tu web.</p><a class="btn btn--sm btn--dark magnet" href="https://wa.me/5491140585229?text=Hola%20ALTO%2C%20quiero%20mi%20web%20y%20el%20Kit%20Despegue%20de%20regalo." target="_blank" rel="noopener" data-hover="¡Lo quiero!"><span>Quiero mi web con regalo</span></a></div>';
   }
 
   // el formulario de contacto: se arma ordenado cuando ya cargó todo
